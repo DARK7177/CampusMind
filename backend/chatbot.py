@@ -104,7 +104,6 @@ class UniversityChatbot:
                 "search_text": search_text
             })
 
-        # General verified resource information
         documents.append({
             "tag": "official_resources",
             "content": (
