@@ -33,7 +33,7 @@ const WELCOME_MESSAGE = {
   role: "bot",
   text: `## Welcome to CampusMind! 👋
 
-I'm your AI enquiry assistant for **Government College Dharamshala**.
+I'm your AI enquiry assistant for Government College Dharamshala.
 
 You can ask me about:
 - Admissions and eligibility
