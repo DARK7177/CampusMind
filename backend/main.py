@@ -13,17 +13,14 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
+        "https://campusmind.bhupesh.website",
         "https://campusmind.pages.dev",
-        "https://campusmind.bhupesh.website"
     ],
-    allow_origin_regex="heeps://[a-z0-9]+\.campusmind\.pages\.dev",
+    allow_origin_regex=r"https://[a-z0-9-]+\.campusmind\.pages\.dev",
     allow_credentials=False,
-    allow_methods=["GET", "POST"],
-    allow_headers=["Content-Type"]
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
-
 
 class ChatRequest(BaseModel):
     message: str = Field(min_length=1, max_length=2000)
