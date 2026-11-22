@@ -15,7 +15,10 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://campusmind.pages.dev",
+        "https://campusmind.bhupesh.website"
     ],
+    allow_origin_regex="heeps://[a-z0-9]+\.campusmind\.pages\.dev",
     allow_credentials=False,
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"]
