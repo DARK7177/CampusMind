@@ -1,0 +1,819 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "namaste",
+        "good morning"
+      ],
+      "keywords": [],
+      "response": "Hello! I am CampusMind, an independent enquiry assistant for Government College Dharamshala. Ask me about courses, admissions, examinations and facilities."
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "shukriya"
+      ],
+      "keywords": [],
+      "response": "You're welcome! Ask me anything else about the college."
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you"
+      ],
+      "keywords": [],
+      "response": "Goodbye! Have a great day."
+    },
+    {
+      "tag": "identity",
+      "patterns": [
+        "who are you",
+        "what is campusmind",
+        "are you official college chatbot"
+      ],
+      "keywords": [],
+      "response": "CampusMind is an independent academic project, not an official college service. It answers questions using a curated knowledge base."
+    },
+    {
+      "tag": "about",
+      "patterns": [
+        "tell me about government college dharamshala",
+        "college history",
+        "when was college established",
+        "about college"
+      ],
+      "keywords": [],
+      "response": "Government College Dharamshala became an intermediate college in 1926, a degree college in 1947 and introduced postgraduate education in 1977. It received NAAC B++ accreditation in 2022. Source: https://gcdharamshala.in/about-us/"
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "where is college located",
+        "college address",
+        "how to reach college"
+      ],
+      "keywords": [],
+      "response": "Government College Dharamshala is in Dharamshala, Kangra district, Himachal Pradesh. See https://gcdharamshala.in/"
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "college contact number",
+        "how to contact college",
+        "college phone number"
+      ],
+      "keywords": [],
+      "response": "Find the current official college contact details at https://gcdharamshala.in/"
+    },
+    {
+      "tag": "affiliation",
+      "patterns": [
+        "which university is college affiliated with",
+        "hpu or hptu affiliation",
+        "which university awards degree"
+      ],
+      "keywords": [],
+      "response": "The college lists regular and several self-financing programmes under Himachal Pradesh University (HPU), while MBA, MCA and B.Tech are listed under Himachal Pradesh Technical University (HPTU). Check the programme prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "all_courses",
+      "patterns": [
+        "what courses are available",
+        "list all courses",
+        "all programmes offered",
+        "which courses college offers"
+      ],
+      "keywords": [],
+      "response": "Courses listed by the college include BA, BSc, BCom, BBA, BCA, BSc Biotechnology, B.Tech (CSE), B.Voc (Retail Management and Hospitality & Tourism), PGDCA, MA, MSc, MCom, MBA and MCA. Check current admission availability at https://admission.gcdharamshala.in/"
+    },
+    {
+      "tag": "ug_courses",
+      "patterns": [
+        "undergraduate courses",
+        "ug programmes",
+        "which bachelor degrees available"
+      ],
+      "keywords": [],
+      "response": "Undergraduate offerings include BA, BSc, BCom, BBA, BCA, BSc Biotechnology, B.Tech (CSE) and B.Voc programmes. See https://gcdharamshala.in/ug-courses/"
+    },
+    {
+      "tag": "pg_courses",
+      "patterns": [
+        "postgraduate courses",
+        "pg programmes",
+        "which masters courses available"
+      ],
+      "keywords": [],
+      "response": "Postgraduate offerings listed include MA, MSc, MCom, MBA and MCA. PGDCA is a postgraduate diploma. See https://admission.gcdharamshala.in/"
+    },
+    {
+      "tag": "course_ba",
+      "patterns": [
+        "tell me about ba",
+        "tell me about bachelor of arts",
+        "does college offer ba",
+        "ba course details",
+        "what is ba"
+      ],
+      "keywords": [
+        "ba",
+        "bachelor of arts"
+      ],
+      "response": "BA (Bachelor of Arts) is listed by Government College Dharamshala. Arts and humanities subjects; subject combinations follow the current NEP-based prospectus. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_ba",
+      "patterns": [
+        "how to apply for ba",
+        "how to apply for bachelor of arts",
+        "ba admission process",
+        "ba eligibility",
+        "ba entrance exam",
+        "ba admission kaise le"
+      ],
+      "keywords": [
+        "ba",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For BA admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BA prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_bsc",
+      "patterns": [
+        "tell me about bsc",
+        "tell me about bachelor of science",
+        "does college offer bsc",
+        "bsc course details",
+        "what is bsc"
+      ],
+      "keywords": [
+        "bsc",
+        "bachelor of science"
+      ],
+      "response": "BSc (Bachelor of Science) is listed by Government College Dharamshala. Science subjects and combinations are described in the current undergraduate prospectus. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_bsc",
+      "patterns": [
+        "how to apply for bsc",
+        "how to apply for bachelor of science",
+        "bsc admission process",
+        "bsc eligibility",
+        "bsc entrance exam",
+        "bsc admission kaise le"
+      ],
+      "keywords": [
+        "bsc",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For BSc admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BSc prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_bcom",
+      "patterns": [
+        "tell me about bcom",
+        "tell me about bachelor of commerce",
+        "does college offer bcom",
+        "bcom course details",
+        "what is bcom"
+      ],
+      "keywords": [
+        "bcom",
+        "bachelor of commerce"
+      ],
+      "response": "BCom (Bachelor of Commerce) is listed by Government College Dharamshala. Commerce undergraduate programme; consult current prospectus for available combinations. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_bcom",
+      "patterns": [
+        "how to apply for bcom",
+        "how to apply for bachelor of commerce",
+        "bcom admission process",
+        "bcom eligibility",
+        "bcom entrance exam",
+        "bcom admission kaise le"
+      ],
+      "keywords": [
+        "bcom",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For BCom admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BCom prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_bba",
+      "patterns": [
+        "tell me about bba",
+        "tell me about bachelor of business administration",
+        "does college offer bba",
+        "bba course details",
+        "what is bba"
+      ],
+      "keywords": [
+        "bba",
+        "bachelor of business administration"
+      ],
+      "response": "BBA (Bachelor of Business Administration) is listed by Government College Dharamshala. Professional undergraduate management programme. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_bba",
+      "patterns": [
+        "how to apply for bba",
+        "how to apply for bachelor of business administration",
+        "bba admission process",
+        "bba eligibility",
+        "bba entrance exam",
+        "bba admission kaise le"
+      ],
+      "keywords": [
+        "bba",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For BBA admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BBA prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_bca",
+      "patterns": [
+        "tell me about bca",
+        "tell me about bachelor of computer applications",
+        "does college offer bca",
+        "bca course details",
+        "what is bca"
+      ],
+      "keywords": [
+        "bca",
+        "bachelor of computer applications"
+      ],
+      "response": "BCA (Bachelor of Computer Applications) is listed by Government College Dharamshala. Professional undergraduate computer applications programme. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_bca",
+      "patterns": [
+        "how to apply for bca",
+        "how to apply for bachelor of computer applications",
+        "bca admission process",
+        "bca eligibility",
+        "bca entrance exam",
+        "bca admission kaise le"
+      ],
+      "keywords": [
+        "bca",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For BCA admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BCA prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_biotech",
+      "patterns": [
+        "tell me about bsc biotechnology",
+        "tell me about bachelor of science in biotechnology",
+        "does college offer bsc biotechnology",
+        "bsc biotechnology course details",
+        "what is bsc biotechnology"
+      ],
+      "keywords": [
+        "bsc biotechnology",
+        "bachelor of science in biotechnology"
+      ],
+      "response": "BSc Biotechnology (Bachelor of Science in Biotechnology) is listed by Government College Dharamshala. Professional biotechnology undergraduate programme. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_biotech",
+      "patterns": [
+        "how to apply for bsc biotechnology",
+        "how to apply for bachelor of science in biotechnology",
+        "bsc biotechnology admission process",
+        "bsc biotechnology eligibility",
+        "bsc biotechnology entrance exam",
+        "bsc biotechnology admission kaise le"
+      ],
+      "keywords": [
+        "bsc biotechnology",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For BSc Biotechnology admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BSc Biotechnology prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_btech",
+      "patterns": [
+        "tell me about b.tech",
+        "tell me about bachelor of technology in computer science and engineering",
+        "does college offer b.tech",
+        "b.tech course details",
+        "what is b.tech"
+      ],
+      "keywords": [
+        "b.tech",
+        "bachelor of technology in computer science and engineering"
+      ],
+      "response": "B.Tech (Bachelor of Technology in Computer Science and Engineering) is listed by Government College Dharamshala. Engineering programme listed under HPTU. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_btech",
+      "patterns": [
+        "how to apply for b.tech",
+        "how to apply for bachelor of technology in computer science and engineering",
+        "b.tech admission process",
+        "b.tech eligibility",
+        "b.tech entrance exam",
+        "b.tech admission kaise le"
+      ],
+      "keywords": [
+        "b.tech",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For B.Tech admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current B.Tech prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_bvoc_rm",
+      "patterns": [
+        "tell me about b.voc retail management",
+        "tell me about bachelor of vocation in retail management",
+        "does college offer b.voc retail management",
+        "b.voc retail management course details",
+        "what is b.voc retail management"
+      ],
+      "keywords": [
+        "b.voc retail management",
+        "bachelor of vocation in retail management"
+      ],
+      "response": "B.Voc Retail Management (Bachelor of Vocation in Retail Management) is listed by Government College Dharamshala. Vocational undergraduate programme in retail management. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_bvoc_rm",
+      "patterns": [
+        "how to apply for b.voc retail management",
+        "how to apply for bachelor of vocation in retail management",
+        "b.voc retail management admission process",
+        "b.voc retail management eligibility",
+        "b.voc retail management entrance exam",
+        "b.voc retail management admission kaise le"
+      ],
+      "keywords": [
+        "b.voc retail management",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For B.Voc Retail Management admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current B.Voc Retail Management prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_bvoc_ht",
+      "patterns": [
+        "tell me about b.voc hospitality and tourism",
+        "tell me about bachelor of vocation in hospitality and tourism",
+        "does college offer b.voc hospitality and tourism",
+        "b.voc hospitality and tourism course details",
+        "what is b.voc hospitality and tourism"
+      ],
+      "keywords": [
+        "b.voc hospitality and tourism",
+        "bachelor of vocation in hospitality and tourism"
+      ],
+      "response": "B.Voc Hospitality and Tourism (Bachelor of Vocation in Hospitality and Tourism) is listed by Government College Dharamshala. Vocational undergraduate programme in hospitality and tourism. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_bvoc_ht",
+      "patterns": [
+        "how to apply for b.voc hospitality and tourism",
+        "how to apply for bachelor of vocation in hospitality and tourism",
+        "b.voc hospitality and tourism admission process",
+        "b.voc hospitality and tourism eligibility",
+        "b.voc hospitality and tourism entrance exam",
+        "b.voc hospitality and tourism admission kaise le"
+      ],
+      "keywords": [
+        "b.voc hospitality and tourism",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For B.Voc Hospitality and Tourism admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current B.Voc Hospitality and Tourism prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_pgdca",
+      "patterns": [
+        "tell me about pgdca",
+        "tell me about post graduate diploma in computer applications",
+        "does college offer pgdca",
+        "pgdca course details",
+        "what is pgdca"
+      ],
+      "keywords": [
+        "pgdca",
+        "post graduate diploma in computer applications"
+      ],
+      "response": "PGDCA (Post Graduate Diploma in Computer Applications) is listed by Government College Dharamshala. Postgraduate diploma in computer applications. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_pgdca",
+      "patterns": [
+        "how to apply for pgdca",
+        "how to apply for post graduate diploma in computer applications",
+        "pgdca admission process",
+        "pgdca eligibility",
+        "pgdca entrance exam",
+        "pgdca admission kaise le"
+      ],
+      "keywords": [
+        "pgdca",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For PGDCA admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current PGDCA prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_ma",
+      "patterns": [
+        "tell me about ma",
+        "tell me about master of arts",
+        "does college offer ma",
+        "ma course details",
+        "what is ma"
+      ],
+      "keywords": [
+        "ma",
+        "master of arts"
+      ],
+      "response": "MA (Master of Arts) is listed by Government College Dharamshala. Postgraduate arts offerings include English and Geography; check current admission notices for subjects. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_ma",
+      "patterns": [
+        "how to apply for ma",
+        "how to apply for master of arts",
+        "ma admission process",
+        "ma eligibility",
+        "ma entrance exam",
+        "ma admission kaise le"
+      ],
+      "keywords": [
+        "ma",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For MA admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current MA prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_msc",
+      "patterns": [
+        "tell me about msc",
+        "tell me about master of science",
+        "does college offer msc",
+        "msc course details",
+        "what is msc"
+      ],
+      "keywords": [
+        "msc",
+        "master of science"
+      ],
+      "response": "MSc (Master of Science) is listed by Government College Dharamshala. Postgraduate science offerings include Chemistry and Geography; check current admission notices. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_msc",
+      "patterns": [
+        "how to apply for msc",
+        "how to apply for master of science",
+        "msc admission process",
+        "msc eligibility",
+        "msc entrance exam",
+        "msc admission kaise le"
+      ],
+      "keywords": [
+        "msc",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For MSc admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current MSc prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_mcom",
+      "patterns": [
+        "tell me about mcom",
+        "tell me about master of commerce",
+        "does college offer mcom",
+        "mcom course details",
+        "what is mcom"
+      ],
+      "keywords": [
+        "mcom",
+        "master of commerce"
+      ],
+      "response": "MCom (Master of Commerce) is listed by Government College Dharamshala. Postgraduate commerce programme. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_mcom",
+      "patterns": [
+        "how to apply for mcom",
+        "how to apply for master of commerce",
+        "mcom admission process",
+        "mcom eligibility",
+        "mcom entrance exam",
+        "mcom admission kaise le"
+      ],
+      "keywords": [
+        "mcom",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For MCom admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current MCom prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_mba",
+      "patterns": [
+        "tell me about mba",
+        "tell me about master of business administration",
+        "does college offer mba",
+        "mba course details",
+        "what is mba"
+      ],
+      "keywords": [
+        "mba",
+        "master of business administration"
+      ],
+      "response": "MBA (Master of Business Administration) is listed by Government College Dharamshala. Postgraduate management programme listed under HPTU. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_mba",
+      "patterns": [
+        "how to apply for mba",
+        "how to apply for master of business administration",
+        "mba admission process",
+        "mba eligibility",
+        "mba entrance exam",
+        "mba admission kaise le"
+      ],
+      "keywords": [
+        "mba",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For MBA admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current MBA prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "course_mca",
+      "patterns": [
+        "tell me about mca",
+        "tell me about master of computer applications",
+        "does college offer mca",
+        "mca course details",
+        "what is mca"
+      ],
+      "keywords": [
+        "mca",
+        "master of computer applications"
+      ],
+      "response": "MCA (Master of Computer Applications) is listed by Government College Dharamshala. Postgraduate computer applications programme listed under HPTU. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+    },
+    {
+      "tag": "admission_mca",
+      "patterns": [
+        "how to apply for mca",
+        "how to apply for master of computer applications",
+        "mca admission process",
+        "mca eligibility",
+        "mca entrance exam",
+        "mca admission kaise le"
+      ],
+      "keywords": [
+        "mca",
+        "admission",
+        "eligibility"
+      ],
+      "response": "For MCA admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current MCA prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+    },
+    {
+      "tag": "admission_general",
+      "patterns": [
+        "how to apply for college admission",
+        "admission process",
+        "online registration",
+        "how to take admission",
+        "admission kaise le"
+      ],
+      "keywords": [],
+      "response": "Use the official admission portal https://admission.gcdharamshala.in/ and choose the UG/PG general or professional programme category. Complete registration and follow the programme-specific counselling instructions."
+    },
+    {
+      "tag": "admission_dates",
+      "patterns": [
+        "admission last date",
+        "when do admissions start",
+        "admission deadline",
+        "admission schedule"
+      ],
+      "keywords": [],
+      "response": "Admission dates vary by programme and session. Read current announcements at https://admission.gcdharamshala.in/ and https://gcdharamshala.in/all-post/."
+    },
+    {
+      "tag": "admission_documents",
+      "patterns": [
+        "documents required for admission",
+        "which documents needed",
+        "admission document list"
+      ],
+      "keywords": [],
+      "response": "The official portal asks applicants to prepare Aadhaar/enrolment number, qualifying marks card, mobile number, email, university registration number if applicable and valid category documents if relevant. Check counselling instructions: https://admission.gcdharamshala.in/"
+    },
+    {
+      "tag": "admission_status",
+      "patterns": [
+        "check admission status",
+        "where is merit list",
+        "applicant login",
+        "check application status"
+      ],
+      "keywords": [],
+      "response": "Check the applicant login, merit lists and counselling notices at https://admission.gcdharamshala.in/ and https://gcdharamshala.in/all-post/. This chatbot cannot view personal application status."
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "college fee structure",
+        "how much are college fees",
+        "tuition fee",
+        "course fees",
+        "fees kitni hai"
+      ],
+      "keywords": [],
+      "response": "Fee amounts vary by programme, category and session. Read the latest official course prospectus at https://gcdharamshala.in/download/; CampusMind does not guess fees."
+    },
+    {
+      "tag": "fee_payment",
+      "patterns": [
+        "how to pay college fees",
+        "online fee payment",
+        "fee payment method"
+      ],
+      "keywords": [],
+      "response": "Use only the instructions provided by the official admission or student portal: https://admission.gcdharamshala.in/"
+    },
+    {
+      "tag": "scholarship",
+      "patterns": [
+        "scholarship application",
+        "are scholarships available",
+        "scholarship schemes",
+        "scholarship kaise milegi"
+      ],
+      "keywords": [],
+      "response": "For scholarship schemes, eligibility and application dates, consult official college notices and the student support office: https://gcdharamshala.in/"
+    },
+    {
+      "tag": "syllabus",
+      "patterns": [
+        "where can i find syllabus",
+        "course syllabus",
+        "semester subjects",
+        "curriculum"
+      ],
+      "keywords": [],
+      "response": "The college maintains programme-wise syllabus links for Arts, Science, Commerce, Management, Computer Science, B.Voc and PG courses: https://gcdharamshala.in/syllabus-2/"
+    },
+    {
+      "tag": "exam_dates",
+      "patterns": [
+        "exam dates",
+        "exam date sheet",
+        "semester examination schedule",
+        "exam kab honge"
+      ],
+      "keywords": [],
+      "response": "Examination dates depend on the programme and affiliating university. Check official college notices and the relevant university examination portal."
+    },
+    {
+      "tag": "results",
+      "patterns": [
+        "how to check result",
+        "semester result",
+        "exam results",
+        "result kab ayega"
+      ],
+      "keywords": [],
+      "response": "Check the results service of your programme’s affiliating university. CampusMind cannot retrieve private marks or results."
+    },
+    {
+      "tag": "attendance",
+      "patterns": [
+        "minimum attendance requirement",
+        "attendance rules",
+        "attendance kitni chahiye"
+      ],
+      "keywords": [],
+      "response": "Attendance requirements depend on the current prospectus and applicable university regulations. Check with your department for the official rule."
+    },
+    {
+      "tag": "library",
+      "patterns": [
+        "college library",
+        "library facilities",
+        "how many books in library"
+      ],
+      "keywords": [],
+      "response": "The college reports a computerized library with more than 71,000 books and electronic resources. See https://gcdharamshala.in/about-library/"
+    },
+    {
+      "tag": "library_hours",
+      "patterns": [
+        "library timings",
+        "library opening hours",
+        "when does library open"
+      ],
+      "keywords": [],
+      "response": "Check the latest library timings on the official library page: https://gcdharamshala.in/about-library/"
+    },
+    {
+      "tag": "hostel",
+      "patterns": [
+        "is hostel available",
+        "hostel admission",
+        "hostel facilities"
+      ],
+      "keywords": [],
+      "response": "The college publishes hostel forms and hostel prospectuses. Consult https://gcdharamshala.in/download/ for the current session."
+    },
+    {
+      "tag": "hostel_fees",
+      "patterns": [
+        "hostel fees",
+        "hostel charges",
+        "how much does hostel cost"
+      ],
+      "keywords": [],
+      "response": "Hostel charges are specified in the current hostel prospectus: https://gcdharamshala.in/download/."
+    },
+    {
+      "tag": "labs",
+      "patterns": [
+        "computer lab facilities",
+        "science laboratories",
+        "does college have labs"
+      ],
+      "keywords": [],
+      "response": "The college has department-specific classrooms and laboratory facilities. See https://gcdharamshala.in/class-rooms-and-seminar-halls/ and ask the relevant department for access details."
+    },
+    {
+      "tag": "sports",
+      "patterns": [
+        "sports facilities",
+        "sports trials",
+        "college sports"
+      ],
+      "keywords": [],
+      "response": "College sports activities and selection-trial notices are posted on https://gcdharamshala.in/all-post/."
+    },
+    {
+      "tag": "placement",
+      "patterns": [
+        "placement opportunities",
+        "career guidance",
+        "campus recruitment",
+        "internships"
+      ],
+      "keywords": [],
+      "response": "For current career guidance, placement activities and internships, check official college notices and contact the relevant department: https://gcdharamshala.in/"
+    },
+    {
+      "tag": "student_portal",
+      "patterns": [
+        "student login",
+        "admission portal login",
+        "forgot applicant password"
+      ],
+      "keywords": [],
+      "response": "Use the official student/applicant portal at https://admission.gcdharamshala.in/. Do not share passwords or verification codes in chat."
+    },
+    {
+      "tag": "notices",
+      "patterns": [
+        "latest notices",
+        "college announcements",
+        "notice board"
+      ],
+      "keywords": [],
+      "response": "Current notices, merit lists and academic announcements are published at https://gcdharamshala.in/all-post/ and https://admission.gcdharamshala.in/"
+    },
+    {
+      "tag": "anti_ragging",
+      "patterns": [
+        "how to report ragging",
+        "anti ragging complaint",
+        "ragging help"
+      ],
+      "keywords": [],
+      "response": "Ragging is prohibited. Contact the college administration or its designated anti-ragging committee; consult the official college website for current reporting information."
+    }
+  ]
+}
