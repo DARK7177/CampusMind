@@ -1,8 +1,7 @@
 
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
 import {
-  Bot,
-  GraduationCap,
   MessageCircle,
   CircleHelp,
   Info,
@@ -10,39 +9,34 @@ import {
   Moon,
   Sun,
   ExternalLink,
-  Sparkles,
   Menu,
   X,
-  BookOpen,
-  ShieldCheck,
   Plus,
   Trash2,
+  Code2 as Github,
+  ArrowUpRight,
 } from "lucide-react";
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import "./index.css";
 
-const API_URL = `${(
-  import.meta.env.VITE_API_URL || "http://127.0.0.1:8000"
-).replace(/\/+$/, "")}/chat`;
+import "./index.css";
+import "./portfolio.css";
+import BackgroundParticles from "./BackgroundParticles";
+
+const API_URL = `${
+  (
+    import.meta.env.VITE_API_URL ||
+    "http://127.0.0.1:8000"
+  ).replace(/\/+$/, "")
+}/chat`;
+
 const STORAGE_KEY = "campusmind-session-v3";
 const SESSION_TIMEOUT = 10 * 60 * 1000;
 
 const WELCOME_MESSAGE = {
   role: "bot",
-  text: `## Welcome to CampusMind! 👋
-
-I'm your AI enquiry assistant for Government College Dharamshala.
-
-You can ask me about:
-- Admissions and eligibility
-- Undergraduate and postgraduate courses
-- Fees and scholarships
-- Examinations and results
-- Library, hostel and campus facilities
-
-**How can I help you today?**`,
+  text: "Welcome to CampusMind.",
 };
 
 const SUGGESTED_QUESTIONS = [
@@ -53,21 +47,9 @@ const SUGGESTED_QUESTIONS = [
 ];
 
 const NAV_ITEMS = [
-  {
-    id: "chat",
-    label: "Chat with CampusMind",
-    icon: MessageCircle,
-  },
-  {
-    id: "faq",
-    label: "FAQs",
-    icon: CircleHelp,
-  },
-  {
-    id: "about",
-    label: "About",
-    icon: Info,
-  },
+  { id: "chat", label: "Home", icon: MessageCircle },
+  { id: "faq", label: "FAQs", icon: CircleHelp },
+  { id: "about", label: "About", icon: Info },
 ];
 
 function createChat(id) {
@@ -87,7 +69,6 @@ function createSession() {
   };
 }
 
-
 function loadSession() {
   try {
     const saved = sessionStorage.getItem(STORAGE_KEY);
@@ -103,7 +84,8 @@ function loadSession() {
         data.chats.every(
           (chat) =>
             typeof chat.id === "number" &&
-            Array.isArray(chat.messages)
+            Array.isArray(chat.messages) &&
+            chat.messages.length > 0
         );
 
       if (valid) {
@@ -114,6 +96,7 @@ function loadSession() {
           )
             ? data.activeChatId
             : data.chats[0].id,
+
           nextChatId: Math.max(
             Number(data.nextChatId) || 1,
             ...data.chats.map((chat) => chat.id + 1)
@@ -130,10 +113,9 @@ function loadSession() {
   return createSession();
 }
 
-
 function MarkdownMessage({ text }) {
   return (
-    <div className="markdown-body">
+    <div className="cm-markdown">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
@@ -144,10 +126,7 @@ function MarkdownMessage({ text }) {
               rel="noopener noreferrer"
             >
               {children}
-              <ExternalLink
-                size={12}
-                className="inline ml-1"
-              />
+              <ExternalLink size={12} />
             </a>
           ),
         }}
@@ -162,9 +141,16 @@ export default function App() {
   const [session, setSession] = useState(loadSession);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [dark, setDark] = useState(false);
   const [sidebar, setSidebar] = useState(false);
   const [page, setPage] = useState("chat");
+
+  const [dark, setDark] = useState(() => {
+    try {
+      return localStorage.getItem("campusmind-theme") !== "light";
+    } catch {
+      return true;
+    }
+  });
 
   const bottomRef = useRef(null);
   const controllerRef = useRef(null);
@@ -175,6 +161,20 @@ export default function App() {
   const activeChat =
     chats.find((chat) => chat.id === activeChatId) ||
     chats[0];
+
+  const isEmpty = activeChat.messages.length === 1;
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(
+        "campusmind-theme",
+        dark ? "dark" : "light"
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  }, [dark]);
+
 
   useEffect(() => {
     try {
@@ -187,14 +187,12 @@ export default function App() {
     }
   }, [session]);
 
- 
   function cancelPendingRequest() {
     requestIdRef.current += 1;
     controllerRef.current?.abort();
     controllerRef.current = null;
     setLoading(false);
   }
-
 
   function resetExpiredSession() {
     if (
@@ -211,58 +209,55 @@ export default function App() {
   }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      resetExpiredSession();
-    }, 15000);
+    const interval = setInterval(
+      resetExpiredSession,
+      15000
+    );
 
-    return () => clearInterval(interval);
-  }, [session.lastActivity]);
-
-  useEffect(() => {
-    const checkExpiry = () => {
-      resetExpiredSession();
-    };
-
-    window.addEventListener("focus", checkExpiry);
+    window.addEventListener(
+      "focus",
+      resetExpiredSession
+    );
 
     document.addEventListener(
       "visibilitychange",
-      checkExpiry
+      resetExpiredSession
     );
 
     return () => {
+      clearInterval(interval);
+
       window.removeEventListener(
         "focus",
-        checkExpiry
+        resetExpiredSession
       );
 
       document.removeEventListener(
         "visibilitychange",
-        checkExpiry
+        resetExpiredSession
       );
     };
   }, [session.lastActivity]);
 
+
   useEffect(() => {
-    if (page === "chat") {
+    if (page === "chat" && !isEmpty) {
       bottomRef.current?.scrollIntoView({
         behavior: "smooth",
         block: "end",
       });
     }
   }, [
-    activeChat?.messages,
+    activeChat.messages,
     activeChatId,
     loading,
     page,
+    isEmpty,
   ]);
 
   useEffect(() => {
-    return () => {
-      controllerRef.current?.abort();
-    };
+    return () => controllerRef.current?.abort();
   }, []);
-
 
   function updateSession(updater) {
     setSession((previous) => ({
@@ -275,9 +270,7 @@ export default function App() {
     updateSession((previous) => ({
       ...previous,
       chats: previous.chats.map((chat) =>
-        chat.id === chatId
-          ? updater(chat)
-          : chat
+        chat.id === chatId ? updater(chat) : chat
       ),
     }));
   }
@@ -290,10 +283,7 @@ export default function App() {
 
       return {
         ...previous,
-        chats: [
-          ...previous.chats,
-          createChat(id),
-        ],
+        chats: [...previous.chats, createChat(id)],
         activeChatId: id,
         nextChatId: id + 1,
       };
@@ -314,6 +304,8 @@ export default function App() {
     }));
 
     setInput("");
+    setPage("chat");
+    setSidebar(false);
   }
 
   function switchChat(id) {
@@ -363,6 +355,11 @@ export default function App() {
     setInput("");
   }
 
+  function navigate(id) {
+    setPage(id);
+    setSidebar(false);
+  }
+
 
   async function sendMessage(value = input) {
     const question = value.trim();
@@ -379,10 +376,12 @@ export default function App() {
 
     updateChat(chatId, (chat) => ({
       ...chat,
+
       title:
         chat.messages.length === 1
           ? question.slice(0, 38)
           : chat.title,
+
       messages: [
         ...chat.messages,
         {
@@ -394,8 +393,7 @@ export default function App() {
 
     setLoading(true);
 
-    const currentRequestId =
-      ++requestIdRef.current;
+    const currentRequestId = ++requestIdRef.current;
 
     const controller = new AbortController();
     controllerRef.current = controller;
@@ -403,12 +401,15 @@ export default function App() {
     try {
       const response = await fetch(API_URL, {
         method: "POST",
+
         headers: {
           "Content-Type": "application/json",
         },
+
         body: JSON.stringify({
           message: question,
         }),
+
         signal: controller.signal,
       });
 
@@ -421,8 +422,7 @@ export default function App() {
       const data = await response.json();
 
       if (
-        currentRequestId !==
-        requestIdRef.current
+        currentRequestId !== requestIdRef.current
       ) {
         return;
       }
@@ -443,8 +443,7 @@ export default function App() {
     } catch (error) {
       if (
         controller.signal.aborted ||
-        currentRequestId !==
-          requestIdRef.current
+        currentRequestId !== requestIdRef.current
       ) {
         return;
       }
@@ -457,15 +456,13 @@ export default function App() {
           ...chat.messages,
           {
             role: "bot",
-            text:
-              "I'm having trouble connecting to the AI server. Please check the backend and try again.",
+            text: "Unable to connect to the server. Please try again in a moment.",
           },
         ],
       }));
     } finally {
       if (
-        currentRequestId ===
-        requestIdRef.current
+        currentRequestId === requestIdRef.current
       ) {
         setLoading(false);
         controllerRef.current = null;
@@ -473,115 +470,102 @@ export default function App() {
     }
   }
 
-
   return (
     <div
-      className={`campus-app ${
-        dark ? "theme-dark" : ""
+      className={`campus-app cm-app ${
+        dark ? "theme-dark" : "theme-light"
       }`}
     >
+      {/* Mobile overlay */}
+
       {sidebar && (
         <button
-          className="mobile-overlay"
+          className="cm-overlay"
           onClick={() => setSidebar(false)}
-          aria-label="Close navigation"
+          aria-label="Close sidebar"
         />
       )}
 
+      {/* Sidebar */}
+
       <aside
-        className={`campus-sidebar ${
-          sidebar ? "show" : ""
+        className={`cm-sidebar ${
+          sidebar ? "cm-sidebar-open" : ""
         }`}
       >
-        <div className="college-brand">
-          <div className="college-emblem">
-            <GraduationCap size={31} />
+        <div className="cm-sidebar-brand">
+          <div>
+            <h2>
+              Campus<span>Mind.</span>
+            </h2>
+
+            <p>College Enquiry System</p>
           </div>
 
-          <h2>
-            Government College
-            <br />
-            Dharamshala
-          </h2>
-
-          <span className="brand-divider" />
-        </div>
-
-        <div className="session-chat-controls">
           <button
-            className="new-chat-button"
-            onClick={newChat}
+            className="cm-mobile-close"
+            onClick={() => setSidebar(false)}
+            aria-label="Close sidebar"
           >
-            <Plus size={19} />
-            New Chat
-          </button>
-
-          <button
-            className="clear-chat-button"
-            onClick={clearChat}
-          >
-            <Trash2 size={17} />
-            Clear Current Chat
+            <X size={20} />
           </button>
         </div>
 
-        <nav className="side-navigation">
+        <button
+          className="cm-new-chat"
+          onClick={newChat}
+        >
+          <Plus size={19} />
+          New Chat
+        </button>
+
+        <nav className="cm-sidebar-nav">
           {NAV_ITEMS.map((item) => {
             const Icon = item.icon;
 
             return (
               <button
                 key={item.id}
-                className={`side-link ${
-                  page === item.id
-                    ? "active"
-                    : ""
-                }`}
-                onClick={() => {
-                  setPage(item.id);
-                  setSidebar(false);
-                }}
+                className={
+                  page === item.id ? "active" : ""
+                }
+                onClick={() => navigate(item.id)}
               >
-                <Icon size={19} />
+                <Icon size={18} />
                 {item.label}
               </button>
             );
           })}
         </nav>
 
-        <div className="session-history">
-          <p className="session-history-label">
-            CURRENT SESSION
+        <div className="cm-history">
+          <p className="cm-history-label">
+            Recent conversations
           </p>
 
           {chats.map((chat) => (
             <div
               key={chat.id}
-              className={`session-chat-row ${
+              className={`cm-history-row ${
                 chat.id === activeChatId
                   ? "selected"
                   : ""
               }`}
             >
               <button
-                className="session-chat-item"
-                onClick={() =>
-                  switchChat(chat.id)
-                }
+                className="cm-history-item"
+                onClick={() => switchChat(chat.id)}
                 title={chat.title}
               >
                 <MessageCircle size={16} />
-
                 <span>{chat.title}</span>
               </button>
 
               <button
-                className="delete-chat-button"
-                onClick={() =>
-                  deleteChat(chat.id)
-                }
-                title="Delete conversation"
+                className="cm-delete"
+                onClick={() => deleteChat(chat.id)}
                 aria-label={`Delete ${chat.title}`}
+                title="Delete conversation"
               >
                 <X size={15} />
               </button>
@@ -589,173 +573,197 @@ export default function App() {
           ))}
         </div>
 
-        <div className="sidebar-bottom">
-          <div className="mountain-art">
-            <div className="mountain-back" />
-            <div className="mountain-front" />
-          </div>
+        <div className="cm-sidebar-bottom">
+          <button
+            className="cm-clear"
+            onClick={clearChat}
+          >
+            <Trash2 size={17} />
+            Clear current chat
+          </button>
 
-          <div className="powered-by">
-            <div className="powered-icon">
-              <Sparkles size={23} />
-            </div>
+          <div className="cm-project-credit">
+            <p>Python Minor Project</p>
 
-            <div>
-              <small>Powered by</small>
-              <strong>CampusMind AI</strong>
-            </div>
+            <a
+              href="https://github.com/DARK7177/CampusMind"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github size={15} />
+              Source code
+              <ArrowUpRight size={13} />
+            </a>
           </div>
         </div>
       </aside>
 
-      <section className="campus-main">
-        <header className="chat-topbar">
+      {/* Main section */}
+
+      <main className="campus-main cm-main">
+        <BackgroundParticles />
+
+        {/* Navbar */}
+
+        <header className="cm-navbar">
           <button
-            className="mobile-menu"
+            className="cm-mobile-menu"
             onClick={() => setSidebar(true)}
-            aria-label="Open navigation"
+            aria-label="Open sidebar"
           >
             <Menu size={23} />
           </button>
 
-          <div className="topbar-logo">
-            <div className="bot-logo">
-              <Bot size={32} />
-            </div>
+          <button
+            className="cm-navbar-brand"
+            onClick={() => navigate("chat")}
+          >
+            Campus<span>Mind.</span>
+          </button>
 
-            <div>
-              <h1>
-                Campus<span>Mind</span>
-              </h1>
+          <nav className="cm-top-nav">
+            {NAV_ITEMS.map((item) => (
+              <button
+                key={item.id}
+                className={
+                  page === item.id ? "active" : ""
+                }
+                onClick={() => navigate(item.id)}
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
 
-              <p>
-                Your AI Enquiry Assistant for
-                Government College Dharamshala
-              </p>
-            </div>
-          </div>
-
-          <div className="topbar-actions">
-            <div className="ai-status">
-              <span className="status-dot" />
-              AI Assistant
-            </div>
-
-            <button
-              className="theme-toggle"
-              onClick={() =>
-                setDark((previous) => !previous)
-              }
-              aria-label="Toggle theme"
-            >
-              {dark ? (
-                <Sun size={19} />
-              ) : (
-                <Moon size={19} />
-              )}
-            </button>
-          </div>
+          <a
+            className="cm-github"
+            href="https://github.com/DARK7177/CampusMind"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub repository"
+          >
+            <Github size={21} />
+          </a>
         </header>
 
         {page === "chat" ? (
           <>
-            {/* Messages */}
-            <div className="conversation-area">
-              {activeChat.messages.map(
-                (message, index) => (
-                  <div
-                    key={`${activeChat.id}-${index}`}
-                    className={`message-row ${
-                      message.role === "user"
-                        ? "from-user"
-                        : "from-bot"
-                    }`}
-                  >
-                    {message.role === "bot" && (
-                      <div className="message-avatar bot-avatar">
-                        <Bot size={23} />
-                      </div>
-                    )}
+            {/* Chat content */}
 
-                    <div className="message-content">
-                      {message.role === "bot" && (
-                        <div className="message-author">
-                          CampusMind
-                          <span>AI</span>
-                        </div>
-                      )}
+            <div
+              className={`cm-conversation ${
+                isEmpty ? "cm-empty" : ""
+              }`}
+            >
+              {/* Portfolio-style welcome screen */}
 
-                      <div
-                        className={`message-bubble ${
-                          message.role
-                        }`}
+              {isEmpty ? (
+                <div className="cm-hero">
+                  <div className="cm-hero-content">
+                    <p className="cm-eyebrow">
+                      College Enquiry System
+                    </p>
+
+                    <h1>
+                      Welcome to
+                      <br />
+                      <span>CampusMind.</span>
+                    </h1>
+
+                    <p className="cm-hero-description">
+                      A simple way to find information
+                      about admissions, courses,
+                      scholarships, examinations and
+                      campus facilities.
+                    </p>
+
+                    <div className="cm-hero-actions">
+                      <button
+                        className="cm-primary"
+                        onClick={() =>
+                          sendMessage(
+                            "How can I apply for admission?"
+                          )
+                        }
+                        disabled={loading}
                       >
-                        {message.role === "bot" ? (
-                          <MarkdownMessage
-                            text={message.text}
-                          />
-                        ) : (
-                          message.text
-                        )}
-                      </div>
+                        Admissions
+                        <ArrowUpRight size={15} />
+                      </button>
+
+                      <button
+                        className="cm-secondary"
+                        onClick={() => navigate("faq")}
+                      >
+                        Explore FAQs
+                      </button>
                     </div>
 
-                    {message.role === "user" && (
-                      <div className="message-avatar user-avatar">
-                        <GraduationCap size={19} />
+                    <p className="cm-reference">
+                      Demo data: Government College
+                      Dharamshala
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <div className="cm-message-list">
+                  {activeChat.messages
+                    .slice(1)
+                    .map((message, index) => (
+                      <div
+                        key={`${activeChat.id}-${index}`}
+                        className={`cm-message ${
+                          message.role === "user"
+                            ? "cm-user-message"
+                            : "cm-bot-message"
+                        }`}
+                      >
+                        <div className="cm-message-label">
+                          {message.role === "user"
+                            ? "You"
+                            : "CampusMind"}
+                        </div>
+
+                        <div className="cm-bubble">
+                          {message.role === "bot" ? (
+                            <MarkdownMessage
+                              text={message.text}
+                            />
+                          ) : (
+                            message.text
+                          )}
+                        </div>
                       </div>
-                    )}
-                  </div>
-                )
-              )}
+                    ))}
 
-              {/* Suggested Questions */}
-              {activeChat.messages.length === 1 && (
-                <div className="suggested-area">
-                  <p>
-                    <Sparkles size={15} />
-                    Suggested questions
-                  </p>
+                  {loading && (
+                    <div className="cm-message cm-bot-message">
+                      <div className="cm-message-label">
+                        CampusMind
+                      </div>
 
-                  <div className="suggestion-grid">
-                    {SUGGESTED_QUESTIONS.map(
-                      (question) => (
-                        <button
-                          key={question}
-                          onClick={() =>
-                            sendMessage(question)
-                          }
-                          disabled={loading}
-                        >
-                          {question}
-                        </button>
-                      )
-                    )}
-                  </div>
+                      <div
+                        className="cm-typing"
+                        role="status"
+                        aria-label="Preparing response"
+                      >
+                        <span />
+                        <span />
+                        <span />
+                      </div>
+                    </div>
+                  )}
+
+                  <div ref={bottomRef} />
                 </div>
               )}
-
-              {/* Typing Indicator */}
-              {loading && (
-                <div className="message-row from-bot">
-                  <div className="message-avatar bot-avatar">
-                    <Bot size={23} />
-                  </div>
-
-                  <div className="typing-indicator">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                </div>
-              )}
-
-              <div ref={bottomRef} />
             </div>
 
-            <div className="chat-composer-wrap">
+            {/* Message input */}
+
+            <div className="cm-composer-wrap">
               <form
-                className="chat-composer"
+                className="cm-composer"
                 onSubmit={(event) => {
                   event.preventDefault();
                   sendMessage();
@@ -766,89 +774,143 @@ export default function App() {
                   onChange={(event) =>
                     setInput(event.target.value)
                   }
-                  placeholder="Ask about courses, admissions, fees, exams..."
+                  placeholder="Ask a question about college..."
                   aria-label="Message CampusMind"
+                  autoComplete="off"
                 />
 
                 <button
                   type="submit"
-                  disabled={
-                    loading || !input.trim()
-                  }
+                  disabled={loading || !input.trim()}
                   aria-label="Send message"
                 >
-                  <Send size={21} />
+                  <Send size={19} />
                 </button>
               </form>
 
-              <p className="composer-note">
-                <ShieldCheck size={13} />
-                AI-generated answers may require
-                verification from official notices.
+              <p className="cm-composer-note">
+                Verify important information from
+                official college notices.
               </p>
             </div>
           </>
+        ) : page === "faq" ? (
+          /* FAQ Page */
+
+          <div className="cm-info-page">
+            <div className="cm-info-content">
+              <p className="cm-eyebrow">
+                Need some help?
+              </p>
+
+              <h1>
+                Frequently Asked
+                <br />
+                <span>Questions.</span>
+              </h1>
+
+              <p className="cm-info-description">
+                Select a question to start a conversation.
+              </p>
+
+              <div className="cm-faq-list">
+                {SUGGESTED_QUESTIONS.map((question) => (
+                  <button
+                    key={question}
+                    onClick={() => sendMessage(question)}
+                    disabled={loading}
+                  >
+                    <span>{question}</span>
+                    <ArrowUpRight size={19} />
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
         ) : (
-          <div className="information-page">
-            {page === "faq" ? (
-              <>
-                <BookOpen size={34} />
+          /* About Page */
 
-                <h2>
-                  Frequently Asked Questions
-                </h2>
+          <div className="cm-info-page">
+            <div className="cm-info-content">
+              <p className="cm-eyebrow">
+                About the project
+              </p>
 
-                <p>
-                  Select a question to ask
-                  CampusMind.
-                </p>
+              <h1>
+                Meet <span>CampusMind.</span>
+              </h1>
 
-                <div className="faq-grid">
-                  {SUGGESTED_QUESTIONS.map(
-                    (question) => (
-                      <button
-                        key={question}
-                        onClick={() => {
-                          setPage("chat");
-                          sendMessage(question);
-                        }}
-                        disabled={loading}
-                      >
-                        {question}
-                        <Send size={16} />
-                      </button>
-                    )
-                  )}
-                </div>
-              </>
-            ) : (
-              <>
-                <Bot size={40} />
+              <p className="cm-info-description">
+                CampusMind is an independent Python-based
+                academic project designed to simplify
+                common college enquiries.
+              </p>
 
-                <h2>About CampusMind</h2>
+              <p className="cm-info-description">
+                It uses a structured knowledge base,
+                TF-IDF, cosine similarity and Gemini API
+                integration to answer questions through
+                a simple chat interface.
+              </p>
 
-                <p>
-                  CampusMind is an independent
-                  academic chatbot project designed
-                  to help students find information
-                  about Government College Dharamshala
-                  using retrieval-augmented generation
-                  and Gemini AI.
-                </p>
+              <p className="cm-info-description">
+                Government College Dharamshala is used
+                as a demonstration example. CampusMind
+                is not an official college service.
+              </p>
+
+              <div className="cm-tech-list">
+                {[
+                  "Python",
+                  "FastAPI",
+                  "React",
+                  "TF-IDF",
+                  "Gemini API",
+                ].map((technology) => (
+                  <span key={technology}>
+                    {technology}
+                  </span>
+                ))}
+              </div>
+
+              <div className="cm-hero-actions">
+                <a
+                  className="cm-primary"
+                  href="https://github.com/DARK7177/CampusMind"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github size={17} />
+                  View Source
+                </a>
 
                 <a
+                  className="cm-secondary"
                   href="https://gcdharamshala.in/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Official College Website
-                  <ExternalLink size={16} />
+                  College Website
+                  <ExternalLink size={14} />
                 </a>
-              </>
-            )}
+              </div>
+            </div>
           </div>
         )}
-      </section>
+
+        <button
+          className="cm-theme-toggle"
+          onClick={() => setDark((previous) => !previous)}
+          aria-label={
+            dark
+              ? "Switch to light mode"
+              : "Switch to dark mode"
+          }
+          title={dark ? "Light mode" : "Dark mode"}
+        >
+          {dark ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
+      </main>
     </div>
   );
 }
