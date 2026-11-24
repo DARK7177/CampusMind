@@ -68,10 +68,15 @@
       "patterns": [
         "college contact number",
         "how to contact college",
-        "college phone number"
+        "college phone number",
+        "college email",
+        "college helpline",
+        "office phone",
+        "How can I contact the admission office?",
+        "admission office phone number"
       ],
       "keywords": [],
-      "response": "Find the current official college contact details at https://gcdharamshala.in/"
+      "response": "### College contact\n- Main office: 01892-224894\n- Self-financing office: 01892-225394\n- Email: gdcdharamshala@gmail.com\n\n**Official source:** [View details](https://gcdharamshala.in/helpdesk-2/)"
     },
     {
       "tag": "affiliation",
@@ -137,14 +142,16 @@
         "ba admission process",
         "ba eligibility",
         "ba entrance exam",
-        "ba admission kaise le"
+        "ba admission kaise le",
+        "ba minimum qualification",
+        "ba admission requirements"
       ],
       "keywords": [
         "ba",
         "admission",
         "eligibility"
       ],
-      "response": "For BA admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BA prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+      "response": "### BA admission — 2026–27\nApplicants must have passed 10+2 from a recognised board. The college describes selection as merit-based under its NEP undergraduate framework. Programme-specific subject and marks requirements must be checked before applying.\n\n[Register online](https://admission.gcdharamshala.in/).\n\n**Official source:** [View details](https://gcdharamshala.in/ug-courses/)"
     },
     {
       "tag": "course_bsc",
@@ -169,14 +176,16 @@
         "bsc admission process",
         "bsc eligibility",
         "bsc entrance exam",
-        "bsc admission kaise le"
+        "bsc admission kaise le",
+        "bsc minimum qualification",
+        "bsc admission requirements"
       ],
       "keywords": [
         "bsc",
         "admission",
         "eligibility"
       ],
-      "response": "For BSc admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BSc prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+      "response": "### BSC admission — 2026–27\nApplicants must have passed 10+2 from a recognised board. The college describes selection as merit-based under its NEP undergraduate framework. Programme-specific subject and marks requirements must be checked before applying.\n\n[Register online](https://admission.gcdharamshala.in/).\n\n**Official source:** [View details](https://gcdharamshala.in/ug-courses/)"
     },
     {
       "tag": "course_bcom",
@@ -201,14 +210,16 @@
         "bcom admission process",
         "bcom eligibility",
         "bcom entrance exam",
-        "bcom admission kaise le"
+        "bcom admission kaise le",
+        "bcom minimum qualification",
+        "bcom admission requirements"
       ],
       "keywords": [
         "bcom",
         "admission",
         "eligibility"
       ],
-      "response": "For BCom admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BCom prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+      "response": "### BCOM admission — 2026–27\nApplicants must have passed 10+2 from a recognised board. The college describes selection as merit-based under its NEP undergraduate framework. Programme-specific subject and marks requirements must be checked before applying.\n\n[Register online](https://admission.gcdharamshala.in/).\n\n**Official source:** [View details](https://gcdharamshala.in/ug-courses/)"
     },
     {
       "tag": "course_bba",
@@ -223,7 +234,7 @@
         "bba",
         "bachelor of business administration"
       ],
-      "response": "BBA (Bachelor of Business Administration) is listed by Government College Dharamshala. Professional undergraduate management programme. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+      "response": "### Programme overview\nBBA (Bachelor of Business Administration) is listed by Government College Dharamshala. Professional undergraduate management programme.\n\nFor BBA admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BBA prospectus for eligibility, selection method, dates and documents; requirements differ across programmes.\n\n### BBA fees and seats — 2026–27\n**Intake:** 60 (40 subsidised, 20 non-subsidised).\n\n| Semester | Subsidised | Non-subsidised |\n| --- | ---: | ---: |\n| Semesters 1, 3, 5 | ₹10,525 | ₹14,525 |\n| Semesters 2, 4, 6 | ₹9,781 | ₹13,781 |\n\nRefundable security: ₹1,000 in first semester. Examination charges are separate. Intake is not a live vacancy count.\n\n**Official source:** [View details](https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf)"
     },
     {
       "tag": "admission_bba",
@@ -255,7 +266,7 @@
         "bca",
         "bachelor of computer applications"
       ],
-      "response": "BCA (Bachelor of Computer Applications) is listed by Government College Dharamshala. Professional undergraduate computer applications programme. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/ For 2026-27 BCA has 60 seats (40 subsidised, 20 non-subsidised). Subsidised fee Rs 11,025 odd / Rs 10,281 even semester; non-subsidised Rs 15,025 odd / Rs 14,281 even semester. Official source: https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf"
+      "response": "### Programme overview\nBCA is a three-year undergraduate computing programme affiliated with HPU, taught through semesters.\n\n### BCA admission — 2026–27\n- Minimum qualification: 10+2 or equivalent in any stream.\n- Minimum marks: **40% (35% for SC/ST)**.\n- Selection: written entrance test (80 marks), plus academic weightage (20 marks).\n- Academic weightage: 10% each of Class 10 and Class 12 percentages.\n- Age limit on 1 July: 21 general, 24 SC/ST, 23 female candidates; discretionary relaxation up to three months.\n- Apply through the [admission portal](https://admission.gcdharamshala.in/).\n\n**Official source:** [View details](https://gcdharamshala.in/bca/)\n\n### BCA fees and seats — 2026–27\n**Intake:** 60 (40 subsidised, 20 non-subsidised).\n\n| Semester | Subsidised | Non-subsidised |\n| --- | ---: | ---: |\n| Semesters 1, 3, 5 | ₹11,025 | ₹15,025 |\n| Semesters 2, 4, 6 | ₹10,281 | ₹14,281 |\n\nRefundable security: ₹1,000 in first semester. Examination charges are separate. Intake is not a live vacancy count.\n\n**Official source:** [View details](https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf)"
     },
     {
       "tag": "admission_bca",
@@ -264,15 +275,26 @@
         "how to apply for bachelor of computer applications",
         "bca admission process",
         "bca eligibility",
-        "bca entrance exam",
-        "bca admission kaise le"
+        "bca admission kaise le",
+        "bca minimum marks",
+        "bca after arts",
+        "bca without maths",
+        "bca age limit",
+        "bca admission requirements",
+        "bca ke liye kitne marks",
+        "Can I join BCA after 12th commerce?",
+        "bca ki admission ke liye kitne marks chahiye",
+        "bca admision eligiblity",
+        "bca after science",
+        "bca minimum percentage",
+        "bca commerce without maths"
       ],
       "keywords": [
         "bca",
         "admission",
         "eligibility"
       ],
-      "response": "For BCA admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BCA prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+      "response": "### BCA admission — 2026–27\n- Minimum qualification: 10+2 or equivalent in any stream.\n- Minimum marks: **40% (35% for SC/ST)**.\n- Selection: written entrance test (80 marks), plus academic weightage (20 marks).\n- Academic weightage: 10% each of Class 10 and Class 12 percentages.\n- Age limit on 1 July: 21 general, 24 SC/ST, 23 female candidates; discretionary relaxation up to three months.\n- Apply through the [admission portal](https://admission.gcdharamshala.in/).\n\n**Official source:** [View details](https://gcdharamshala.in/bca/)"
     },
     {
       "tag": "course_biotech",
@@ -281,13 +303,18 @@
         "tell me about bachelor of science in biotechnology",
         "does college offer bsc biotechnology",
         "bsc biotechnology course details",
-        "what is bsc biotechnology"
+        "what is bsc biotechnology",
+        "tell me about bsc biotech",
+        "tell me about bachelor of science in biotech",
+        "does college offer bsc biotech",
+        "bsc biotech course details",
+        "what is bsc biotech"
       ],
       "keywords": [
         "bsc biotechnology",
         "bachelor of science in biotechnology"
       ],
-      "response": "BSc Biotechnology (Bachelor of Science in Biotechnology) is listed by Government College Dharamshala. Professional biotechnology undergraduate programme. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+      "response": "### Programme overview\nBSc Biotechnology (Bachelor of Science in Biotechnology) is listed by Government College Dharamshala. Professional biotechnology undergraduate programme.\n\n### B.Sc. Biotechnology admission\nThe department lists 10+2 medical or non-medical stream with 50% marks (45% SC/ST). Its published test outline covers physics, chemistry, mathematics, biology and biotechnology for 50 marks. Consult the session-specific notice to confirm whether a test is held.\n\n[Apply online](https://admission.gcdharamshala.in/).\n\n**Official source:** [View details](https://gcdharamshala.in/bio-technology/)\n\nOfficial Government College Dharamshala 2026-27 prospectus: B.Sc. Biotechnology intake: 2026-27 intake not explicitly verified in the cited prospectus. Subsidised fee: Rs 14,525 for semester 1, 3 and 5 and Rs 13,781 for semester 2, 4 and 6. The prospectus does not list a non-subsidised fee for this programme. A one-time refundable security deposit of Rs 1,000 applies in the first semester; examination fees are paid separately. Figures are for academic session 2026-27, not a live vacancy count. Source: https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf"
     },
     {
       "tag": "admission_biotech",
@@ -297,14 +324,23 @@
         "bsc biotechnology admission process",
         "bsc biotechnology eligibility",
         "bsc biotechnology entrance exam",
-        "bsc biotechnology admission kaise le"
+        "bsc biotechnology admission kaise le",
+        "biotechnology minimum marks",
+        "biotech eligibility",
+        "how to apply for bsc biotech",
+        "how to apply for bachelor of science in biotech",
+        "bsc biotech admission process",
+        "bsc biotech eligibility",
+        "bsc biotech entrance exam",
+        "bsc biotech admission kaise le",
+        "biotech minimum marks"
       ],
       "keywords": [
         "bsc biotechnology",
         "admission",
         "eligibility"
       ],
-      "response": "For BSc Biotechnology admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current BSc Biotechnology prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+      "response": "### B.Sc. Biotechnology admission\nThe department lists 10+2 medical or non-medical stream with 50% marks (45% SC/ST). Its published test outline covers physics, chemistry, mathematics, biology and biotechnology for 50 marks. Consult the session-specific notice to confirm whether a test is held.\n\n[Apply online](https://admission.gcdharamshala.in/).\n\n**Official source:** [View details](https://gcdharamshala.in/bio-technology/)"
     },
     {
       "tag": "course_btech",
@@ -415,7 +451,7 @@
         "pgdca",
         "post graduate diploma in computer applications"
       ],
-      "response": "PGDCA (Post Graduate Diploma in Computer Applications) is listed by Government College Dharamshala. Postgraduate diploma in computer applications. For up-to-date duration, eligibility, seats and fee details consult the relevant prospectus: https://gcdharamshala.in/download/"
+      "response": "### Programme overview\nPGDCA is a one-year postgraduate computer applications diploma with two semesters.\n\n### PGDCA eligibility and selection\n- Bachelor's degree with 50% aggregate (45% for SC/ST), or the specified 106-credit equivalent route.\n- Age on 1 July: up to 26 for men, 28 for women and 29 for SC/ST; applicable disability relaxations.\n- Entrance test if applications exceed three times the seat count; otherwise graduation merit.\n- [Apply online](https://admission.gcdharamshala.in/).\n\n**Official source:** [View details](https://gcdharamshala.in/pgdca/)\n\n### PGDCA fees and seats — 2026–27\n**Intake:** 40 (30 subsidised, 10 non-subsidised) plus one Single Girl Child supernumerary seat.\n\n| Semester | Subsidised | Non-subsidised |\n| --- | ---: | ---: |\n| Semester 1 | ₹15,025 | ₹20,025 |\n| Semester 2 | ₹8,281 | ₹12,281 |\n\nRefundable security: ₹1,000 in first semester. Examination charges are separate. Intake is not a live vacancy count.\n\n**Official source:** [View details](https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf)"
     },
     {
       "tag": "admission_pgdca",
@@ -425,14 +461,16 @@
         "pgdca admission process",
         "pgdca eligibility",
         "pgdca entrance exam",
-        "pgdca admission kaise le"
+        "pgdca admission kaise le",
+        "pgdca minimum marks",
+        "pgdca age limit"
       ],
       "keywords": [
         "pgdca",
         "admission",
         "eligibility"
       ],
-      "response": "For PGDCA admission, use the official college portal https://admission.gcdharamshala.in/ and select the corresponding programme. Check the current PGDCA prospectus for eligibility, selection method, dates and documents; requirements differ across programmes."
+      "response": "### PGDCA eligibility and selection\n- Bachelor's degree with 50% aggregate (45% for SC/ST), or the specified 106-credit equivalent route.\n- Age on 1 July: up to 26 for men, 28 for women and 29 for SC/ST; applicable disability relaxations.\n- Entrance test if applications exceed three times the seat count; otherwise graduation merit.\n- [Apply online](https://admission.gcdharamshala.in/).\n\n**Official source:** [View details](https://gcdharamshala.in/pgdca/)"
     },
     {
       "tag": "course_ma",
@@ -601,10 +639,12 @@
         "admission process",
         "online registration",
         "how to take admission",
-        "admission kaise le"
+        "admission kaise le",
+        "college me admission kaise le",
+        "registration process"
       ],
       "keywords": [],
-      "response": "Use the official admission portal https://admission.gcdharamshala.in/ and choose the UG/PG general or professional programme category. Complete registration and follow the programme-specific counselling instructions."
+      "response": "### How to apply\n1. Open the [admission portal](https://admission.gcdharamshala.in/).\n2. Choose UG or PG and general or professional registration.\n3. Select programme and year or semester.\n4. Complete registration with your own valid contact details.\n5. After login, select subjects if applicable.\n6. Monitor merit lists and counselling messages. Bring originals and copies if called for counselling.\n\nSelection requirements vary by course.\n\n**Official source:** [View details](https://admission.gcdharamshala.in/)"
     },
     {
       "tag": "admission_dates",
@@ -709,40 +749,59 @@
       "patterns": [
         "minimum attendance requirement",
         "attendance rules",
-        "attendance kitni chahiye"
+        "attendance kitni chahiye",
+        "75 percent attendance",
+        "attendance shortage",
+        "What happens if my attendance is 60%?",
+        "attendance below 75 percent",
+        "short attendance exam eligibility"
       ],
       "keywords": [],
-      "response": "Attendance requirements depend on the current prospectus and applicable university regulations. Check with your department for the official rule."
+      "response": "The published college rules prescribe 75% attendance in lectures and practicals for examination eligibility, with a formal exemption procedure in applicable cases. Confirm the regulation applicable to your programme and session.\n\n**Official source:** [View details](https://gcdharamshala.in/rules/)"
     },
     {
       "tag": "library",
       "patterns": [
         "college library",
         "library facilities",
-        "how many books in library"
+        "how many books in library",
+        "library books",
+        "library membership",
+        "library borrowing rules"
       ],
       "keywords": [],
-      "response": "The college reports a computerized library with more than 71,000 books and electronic resources. See https://gcdharamshala.in/about-library/"
+      "response": "### College library\nThe official library page reports 71,375 books, approximately 680 seats, digital resources, Wi-Fi, a reading hall and an online catalogue. UG students may borrow two books and PG students three. The loan period is 30 days.\n\n**Official source:** [View details](https://gcdharamshala.in/about-library/)"
     },
     {
       "tag": "library_hours",
       "patterns": [
         "library timings",
         "library opening hours",
-        "when does library open"
+        "when does library open",
+        "library kab khulti hai",
+        "library closing time",
+        "book issue time"
       ],
       "keywords": [],
-      "response": "Check the latest library timings on the official library page: https://gcdharamshala.in/about-library/"
+      "response": "### Library timings\n- Reading hours: **8 AM–8 PM**.\n- Book issue and return: **10 AM–4 PM**.\nCheck notices for holiday or schedule changes.\n\n**Official source:** [View details](https://gcdharamshala.in/about-library/)"
     },
     {
       "tag": "hostel",
       "patterns": [
         "is hostel available",
         "hostel admission",
-        "hostel facilities"
+        "hostel facilities",
+        "boys hostel",
+        "girls hostel",
+        "hostel seats",
+        "hostel capacity",
+        "hostel available hai",
+        "Can girls get hostel accommodation?",
+        "girls hostel available",
+        "boys hostel available"
       ],
       "keywords": [],
-      "response": "The college publishes hostel forms and hostel prospectuses. Consult https://gcdharamshala.in/download/ for the current session."
+      "response": "### Hostel accommodation\nThe college hostel page lists capacity for **60 boys and 100 girls**, allocated by merit. Tribal accommodation is reserved for tribal students. These are published capacities, not current vacancies.\n\nThe 2026–27 handbook and application form are on the [downloads page](https://gcdharamshala.in/download/).\n\n**Official source:** [View details](https://gcdharamshala.in/hostel/)"
     },
     {
       "tag": "hostel_fees",
@@ -780,10 +839,12 @@
         "placement opportunities",
         "career guidance",
         "campus recruitment",
-        "internships"
+        "internships",
+        "placement package",
+        "placement percentage"
       ],
       "keywords": [],
-      "response": "For current career guidance, placement activities and internships, check official college notices and contact the relevant department: https://gcdharamshala.in/"
+      "response": "The college reports an active Career Guidance Cell that arranges counselling sessions. Verified placement rates, salary packages and current recruiter lists are not available in this dataset.\n\n**Official source:** [View details](https://gcdharamshala.in/about-us/)"
     },
     {
       "tag": "student_portal",
@@ -824,7 +885,13 @@
         "BCA fee structure",
         "BCA subsidized seats",
         "BCA non subsidized fee",
-        "BCA ki fees kitni hai"
+        "BCA ki fees kitni hai",
+        "bca semester fees",
+        "bca seat intake",
+        "bca ki seat kitni hai",
+        "bca me kitni seats h",
+        "bca seat count",
+        "bca total intake"
       ],
       "keywords": [
         "bca",
@@ -832,7 +899,7 @@
         "fee",
         "2026-27"
       ],
-      "response": "Official Government College Dharamshala 2026-27 prospectus: BCA intake: 60 total: 40 subsidised and 20 non-subsidised. Subsidised fee: Rs 11,025 for semester 1, 3 and 5 and Rs 10,281 for semester 2, 4 and 6. Non-subsidised fee: Rs 15,025 for semester 1, 3 and 5 and Rs 14,281 for semester 2, 4 and 6. A one-time refundable security deposit of Rs 1,000 applies in the first semester; examination fees are paid separately. Figures are for academic session 2026-27, not a live vacancy count. Source: https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf"
+      "response": "### BCA fees and seats — 2026–27\n**Intake:** 60 (40 subsidised, 20 non-subsidised).\n\n| Semester | Subsidised | Non-subsidised |\n| --- | ---: | ---: |\n| Semesters 1, 3, 5 | ₹11,025 | ₹15,025 |\n| Semesters 2, 4, 6 | ₹10,281 | ₹14,281 |\n\nRefundable security: ₹1,000 in first semester. Examination charges are separate. Intake is not a live vacancy count.\n\n**Official source:** [View details](https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf)"
     },
     {
       "tag": "seats_fees_bba",
@@ -843,7 +910,10 @@
         "BBA fee structure",
         "BBA subsidized seats",
         "BBA non subsidized fee",
-        "BBA ki fees kitni hai"
+        "BBA ki fees kitni hai",
+        "bba semester fees",
+        "bba seat intake",
+        "bba ki seat kitni hai"
       ],
       "keywords": [
         "bba",
@@ -851,7 +921,7 @@
         "fee",
         "2026-27"
       ],
-      "response": "Official Government College Dharamshala 2026-27 prospectus: BBA intake: 60 total: 40 subsidised and 20 non-subsidised. Subsidised fee: Rs 10,525 for semester 1, 3 and 5 and Rs 9,781 for semester 2, 4 and 6. Non-subsidised fee: Rs 14,525 for semester 1, 3 and 5 and Rs 13,781 for semester 2, 4 and 6. A one-time refundable security deposit of Rs 1,000 applies in the first semester; examination fees are paid separately. Figures are for academic session 2026-27, not a live vacancy count. Source: https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf"
+      "response": "### BBA fees and seats — 2026–27\n**Intake:** 60 (40 subsidised, 20 non-subsidised).\n\n| Semester | Subsidised | Non-subsidised |\n| --- | ---: | ---: |\n| Semesters 1, 3, 5 | ₹10,525 | ₹14,525 |\n| Semesters 2, 4, 6 | ₹9,781 | ₹13,781 |\n\nRefundable security: ₹1,000 in first semester. Examination charges are separate. Intake is not a live vacancy count.\n\n**Official source:** [View details](https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf)"
     },
     {
       "tag": "seats_fees_biotech",
@@ -862,13 +932,21 @@
         "B.Sc. Biotechnology fee structure",
         "B.Sc. Biotechnology subsidized seats",
         "B.Sc. Biotechnology non subsidized fee",
-        "B.Sc. Biotechnology ki fees kitni hai"
+        "B.Sc. Biotechnology ki fees kitni hai",
+        "how many bsc Biotechnology seats",
+        "bsc Biotechnology total seats",
+        "bsc Biotechnology fees",
+        "bsc Biotechnology fee structure",
+        "bsc Biotechnology subsidized seats",
+        "bsc Biotechnology non subsidized fee",
+        "bsc Biotechnology ki fees kitni hai"
       ],
       "keywords": [
         "biotech",
         "seats",
         "fee",
-        "2026-27"
+        "2026-27",
+        "bsc biotechnology"
       ],
       "response": "Official Government College Dharamshala 2026-27 prospectus: B.Sc. Biotechnology intake: 2026-27 intake not explicitly verified in the cited prospectus. Subsidised fee: Rs 14,525 for semester 1, 3 and 5 and Rs 13,781 for semester 2, 4 and 6. The prospectus does not list a non-subsidised fee for this programme. A one-time refundable security deposit of Rs 1,000 applies in the first semester; examination fees are paid separately. Figures are for academic session 2026-27, not a live vacancy count. Source: https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf"
     },
@@ -881,7 +959,10 @@
         "PGDCA fee structure",
         "PGDCA subsidized seats",
         "PGDCA non subsidized fee",
-        "PGDCA ki fees kitni hai"
+        "PGDCA ki fees kitni hai",
+        "pgdca semester fees",
+        "pgdca seat intake",
+        "pgdca ki seat kitni hai"
       ],
       "keywords": [
         "pgdca",
@@ -889,7 +970,7 @@
         "fee",
         "2026-27"
       ],
-      "response": "Official Government College Dharamshala 2026-27 prospectus: PGDCA intake: 40 regular seats (30 subsidised, 10 non-subsidised) plus 1 supernumerary Single Girl Child seat. Subsidised fee: Rs 15,025 for semester 1 and Rs 8,281 for semester 2. Non-subsidised fee: Rs 20,025 for semester 1 and Rs 12,281 for semester 2. A one-time refundable security deposit of Rs 1,000 applies in the first semester; examination fees are paid separately. Figures are for academic session 2026-27, not a live vacancy count. Source: https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf"
+      "response": "### PGDCA fees and seats — 2026–27\n**Intake:** 40 (30 subsidised, 10 non-subsidised) plus one Single Girl Child supernumerary seat.\n\n| Semester | Subsidised | Non-subsidised |\n| --- | ---: | ---: |\n| Semester 1 | ₹15,025 | ₹20,025 |\n| Semester 2 | ₹8,281 | ₹12,281 |\n\nRefundable security: ₹1,000 in first semester. Examination charges are separate. Intake is not a live vacancy count.\n\n**Official source:** [View details](https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf)"
     },
     {
       "tag": "seats_fees_ba",
@@ -1070,6 +1151,153 @@
         "all programmes"
       ],
       "response": "For 2026-27 the verified intake is BCA 60 (40 subsidised + 20 non-subsidised), BBA 60 (40+20), PGDCA 40 (30+10) plus 1 Single Girl Child supernumerary seat. BCA fees per semester: subsidised Rs 11,025 odd/Rs 10,281 even; non-subsidised Rs 15,025 odd/Rs 14,281 even. BBA: subsidised Rs 10,525 odd/Rs 9,781 even; non-subsidised Rs 14,525 odd/Rs 13,781 even. PGDCA: subsidised Rs 15,025 semester 1/Rs 8,281 semester 2; non-subsidised Rs 20,025/Rs 12,281. B.Sc. Biotechnology subsidised fees Rs 14,525 odd/Rs 13,781 even. For BA/BSc/BCom fees depend on subject and category. Other programme seat counts and fees were not verified. Source: https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf and https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BA-BSc-and-BCom-2026-27.pdf"
+    },
+    {
+      "tag": "bca_entrance",
+      "patterns": [
+        "bca entrance syllabus",
+        "bca entrance test pattern",
+        "bca entrance marks",
+        "bca entrance subjects",
+        "bca entrance exam"
+      ],
+      "keywords": [
+        "bca",
+        "entrance"
+      ],
+      "response": "### BCA entrance test\nThe written assessment is worth 80 marks and covers numerical aptitude, English, general knowledge and computing awareness. School results contribute another 20 marks to the merit score. Non-subsidised selection follows the merit list after subsidised seats are filled, with candidate consent.\n\n**Official source:** [View details](https://gcdharamshala.in/bca/)"
+    },
+    {
+      "tag": "bca_syllabus",
+      "patterns": [
+        "bca syllabus",
+        "bca subjects",
+        "bca semester 1 subjects",
+        "bca semester 2 subjects"
+      ],
+      "keywords": [
+        "bca",
+        "syllabus"
+      ],
+      "response": "### BCA syllabus (NEP, effective 2025–26)\n**Semester 1:** computer fundamentals and office tools, C programming, accounting, practicals and ability enhancement.\n\n**Semester 2:** web technologies, data structures, mathematics pool, practicals and additional credit components.\n\nSee the official course page for the complete semester structure.\n\n**Official source:** [View details](https://gcdharamshala.in/bca/)"
+    },
+    {
+      "tag": "pgdca_syllabus",
+      "patterns": [
+        "pgdca syllabus",
+        "pgdca subjects",
+        "pgdca semester subjects"
+      ],
+      "keywords": [
+        "pgdca",
+        "syllabus"
+      ],
+      "response": "### PGDCA curriculum\n**Semester 1:** C programming, office automation, computer organisation, elective and practicals.\n\n**Semester 2:** data and file structures, web design, database management, elective and practicals.\n\n**Official source:** [View details](https://gcdharamshala.in/pgdca/)"
+    },
+    {
+      "tag": "ignou_centre",
+      "patterns": [
+        "ignou study centre",
+        "distance education centre",
+        "ignou college centre"
+      ],
+      "keywords": [
+        "ignou"
+      ],
+      "response": "The college reports an IGNOU study centre. Contact the college office for the current programme list and centre details.\n\n**Official source:** [View details](https://gcdharamshala.in/about-us/)"
+    },
+    {
+      "tag": "total_fees_bca",
+      "patterns": [
+        "What is the total cost of BCA for 3 years?",
+        "BCA total fees for six semesters",
+        "BCA full course fee",
+        "BCA 3 saal ki total fees",
+        "BCA overall degree cost"
+      ],
+      "keywords": [
+        "bca",
+        "total",
+        "fees"
+      ],
+      "response": "### BCA: estimated six-semester cost\n- Subsidised: ₹63,918.\n- Non-subsidised: ₹87,918.\n- If the ₹1,000 refundable security is additional, initial total outlay is ₹64,918 or ₹88,918, respectively.\n\nCalculated using the 2026–27 odd/even rates for three years; future rates may change. Examination charges are excluded.\n\n**Official source:** [View details](https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf)"
+    },
+    {
+      "tag": "total_fees_bba",
+      "patterns": [
+        "What is the total cost of BBA for 3 years?",
+        "BBA total fees for six semesters",
+        "BBA full course fee",
+        "BBA 3 saal ki total fees",
+        "BBA overall degree cost"
+      ],
+      "keywords": [
+        "bba",
+        "total",
+        "fees"
+      ],
+      "response": "### BBA: estimated six-semester cost\n- Subsidised: ₹60,918.\n- Non-subsidised: ₹84,918.\n- If the ₹1,000 refundable security is additional, initial total outlay is ₹61,918 or ₹85,918, respectively.\n\nCalculated using the 2026–27 odd/even rates for three years; future rates may change. Examination charges are excluded.\n\n**Official source:** [View details](https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf)"
+    },
+    {
+      "tag": "compare_bca_bba_fees",
+      "patterns": [
+        "What is the difference between BCA and BBA fees?",
+        "compare bca and bba fees",
+        "bca vs bba fee structure",
+        "bca aur bba ki fees difference",
+        "which is cheaper bca or bba"
+      ],
+      "keywords": [
+        "bca",
+        "bba",
+        "fees",
+        "comparison"
+      ],
+      "response": "### BCA vs BBA fees (2026–27)\n- BCA subsidised: ₹11,025 odd / ₹10,281 even; non-subsidised: ₹15,025 / ₹14,281.\n- BBA subsidised: ₹10,525 odd / ₹9,781 even; non-subsidised: ₹14,525 / ₹13,781.\n\nBCA costs ₹500 more per semester in either category, or ₹3,000 more over six semesters if rates stay unchanged. Security and exam charges are separate.\n\n**Official source:** [View details](https://gcdharamshala.in/wp-content/uploads/2026/06/Prospectus-BCA-BBA-B.SC_.-BioTech-and-PGDCA-2026-27.pdf)"
+    },
+    {
+      "tag": "library_borrow_evening",
+      "patterns": [
+        "Can I borrow books at 6 PM?",
+        "can i issue books in evening",
+        "book return after 4 pm",
+        "library book issue after 4 pm",
+        "can i borrow books at 5 pm"
+      ],
+      "keywords": [
+        "library",
+        "borrow",
+        "books"
+      ],
+      "response": "Reading hours are 8 AM–8 PM, but book issue and return hours are 10 AM–4 PM. At 6 PM you can normally read, but regular borrowing hours have ended. Check current notices.\n\n[Library information](https://gcdharamshala.in/about-library/)"
+    },
+    {
+      "tag": "unverified_pool",
+      "patterns": [
+        "What is the college swimming pool fee?",
+        "college swimming pool",
+        "swimming pool charges",
+        "is there a swimming pool"
+      ],
+      "keywords": [
+        "swimming",
+        "pool"
+      ],
+      "response": "The knowledge base does not confirm a swimming pool or its charges. Please contact the college office before making plans. [Official website](https://gcdharamshala.in/)"
+    },
+    {
+      "tag": "unrelated_question",
+      "patterns": [
+        "What is the capital of Japan?",
+        "capital of japan",
+        "capital of france",
+        "who is prime minister",
+        "weather forecast today"
+      ],
+      "keywords": [
+        "unrelated"
+      ],
+      "response": "I am CampusMind, a college enquiry assistant. I can help with college courses, admissions, fees, examinations and facilities, but this question is outside my knowledge base."
     }
   ]
 }
