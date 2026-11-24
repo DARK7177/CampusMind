@@ -1,194 +1,297 @@
 
-# 🎓 CampusMind — AI-Powered College Enquiry Chatbot
+# CampusMind — AI-Powered College Enquiry Chatbot
 
-![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
-![Gemini](https://img.shields.io/badge/AI-Google%20Gemini-4285F4?logo=google&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
-![Cloudflare](https://img.shields.io/badge/Frontend-Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)
-![Render](https://img.shields.io/badge/Backend-Render-46E3B7?logo=render&logoColor=white)
-![License](https://img.shields.io/badge/License-Not%20Specified-lightgrey)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Scikit Learn](https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
 
-CampusMind is an AI-powered college enquiry chatbot developed as an independent academic project to simplify access to college-related information.
+## Overview
 
-It helps students find information about admissions, courses, scholarships, examinations, fees, and campus facilities through a modern conversational interface.
+CampusMind is an AI-powered college enquiry chatbot designed to provide students, applicants and visitors with quick and relevant information about academic institutions.
 
-The chatbot combines **Retrieval-Augmented Generation (RAG)**, **TF-IDF-based information retrieval**, **cosine similarity**, and **Google Gemini AI** to provide context-aware responses using a structured knowledge base.
+The system combines Natural Language Processing (NLP), TF-IDF vectorization, cosine similarity, spelling correction and Google Gemini AI to deliver knowledge-grounded responses.
 
-CampusMind is designed as a generic college enquiry system. Government College Dharamshala is used as a demonstration example, and the knowledge base can be customized for other educational institutions.
+Unlike conventional keyword-based chatbots, CampusMind processes natural language queries and retrieves relevant information from a structured knowledge base.
 
----
+The project uses Government College Dharamshala as a demonstration institution. Its architecture is designed to be adaptable to other colleges and universities by replacing or extending the knowledge base.
 
-## 🌐 Live Demo
-
-| Resource | Link |
-|----------|------|
-| Live Application | [campusmind.bhupesh.website](https://campusmind.bhupesh.website) |
-| GitHub Repository | [DARK7177/CampusMind](https://github.com/DARK7177/CampusMind) |
-| Backend API | [Render API](https://campusmind-api-q782.onrender.com) |
-| Developer Portfolio | [Portfolio](https://bhupesh-portfolio7.netlify.app/) |
-
-> The backend is hosted on Render. Initial responses may take longer if the free-tier server is inactive.
+CampusMind is an independent academic project and is not an official college service.
 
 ---
 
-## ✨ Features
+## Live Demo
 
-### Artificial Intelligence
+- **Website:** https://campusmind.bhupesh.website
+- **Backend API:** https://campusmind-api-q782.onrender.com
+- **API Documentation:** https://campusmind-api-q782.onrender.com/docs
+- **GitHub Repository:** https://github.com/DARK7177/CampusMind
 
-- AI-powered responses using Google Gemini
-- Retrieval-Augmented Generation (RAG)
-- TF-IDF-based information retrieval
-- Cosine similarity for relevant information matching
-- Structured JSON knowledge base
-- Context-aware college enquiry responses
-
-### Chat Functionality
-
-- Multiple independent chat conversations
-- Temporary chat history using sessionStorage
-- Automatic session expiration after 10 minutes of inactivity
-- Create new conversations
-- Switch between existing conversations
-- Clear individual conversations
-- Delete individual conversations
-- Automatic scrolling to the latest message
-- Loading and typing indicators
-- Markdown-formatted AI responses
-- Clickable links in chatbot responses
-- Cancellation of pending requests when changing conversations
-
-### User Interface
-
-- Modern portfolio-inspired interface
-- Minimal black, white, and green colour scheme
-- Animated particle network background
-- Canvas-based animations without external animation libraries
-- Light and dark themes
-- Persistent theme preference using localStorage
-- Responsive desktop, tablet, and mobile layout
-- Redesigned welcome screen
-- Collapsible mobile sidebar
-- Interactive FAQ section
-- Dedicated About page
-- GitHub repository integration
-- Keyboard focus indicators
-- Reduced-motion preference support
+> The backend is hosted on Render. Initial requests may take longer when the service is waking up from inactivity.
 
 ---
 
-## 🆕 Latest UI Update
+## Features
 
-The CampusMind frontend has been redesigned to provide a cleaner and more consistent user experience.
+### Intelligent Query Processing
 
-The updated interface is inspired by the developer's personal portfolio website and focuses on simplicity, accessibility, and responsiveness.
+- Natural Language Processing using NLTK.
+- Text normalization and tokenization.
+- Stopword removal.
+- Porter stemming.
+- English and Roman Hindi (Hinglish) query support.
+- Automatic spelling correction using Difflib.
+- Course-specific intent matching.
+- Word-level unigram and bigram vectorization.
 
-### Major Improvements
+### Hybrid AI Engine
 
-- Replaced the previous college-specific visual theme with generic CampusMind branding.
-- Introduced a minimal black and green dark theme.
-- Added an animated particle background using the HTML5 Canvas API.
-- Redesigned the welcome screen with prominent typography.
-- Introduced modern rounded action buttons.
-- Improved sidebar navigation and conversation history.
-- Redesigned chat messages and the message input area.
-- Added a floating theme switch on desktop.
-- Implemented persistent theme preferences.
-- Improved mobile navigation and responsive layouts.
-- Redesigned the FAQ and About pages.
-- Separated interface styling into a dedicated portfolio.css file.
+- TF-IDF-based information retrieval.
+- Cosine similarity for intent ranking.
+- Direct knowledge base responses for strong matches.
+- Google Gemini integration for ambiguous queries.
+- Knowledge-grounded AI response generation.
+- Local fallback when the AI service is unavailable.
+- Similarity threshold-based rejection of weak matches.
 
-The frontend redesign does not change the existing Python backend, retrieval algorithms, knowledge base, or Gemini API integration.
+### College Information
+
+- Undergraduate and postgraduate programmes.
+- Course eligibility and admission procedures.
+- Entrance examinations.
+- Course-wise fee structures.
+- Subsidised and non-subsidised seats.
+- Selected course fee comparisons.
+- Selected total course fee calculations.
+- Scholarships and student support.
+- Hostel and library facilities.
+- Examination and attendance information.
+- College contact details.
+- Official prospectus and website links.
+
+### Modern User Interface
+
+- Responsive React-based frontend.
+- Minimal black-and-white design with green accents.
+- Animated particle background.
+- Dark and light themes.
+- Multiple chat sessions.
+- Session-based conversation history.
+- New chat and clear chat functionality.
+- Suggested questions.
+- Loading indicators.
+- Markdown-formatted responses.
+- Clickable official source links.
+- Mobile-friendly layout.
 
 ---
 
-## 🛠️ Tech Stack
+## Technology Stack
 
-| Category | Technologies |
-|----------|-------------|
-| Frontend | React.js, JavaScript, Vite |
-| Styling | CSS3, CSS Variables, Tailwind CSS v4 |
-| Animation | HTML5 Canvas API, requestAnimationFrame |
+| Layer | Technology |
+| --- | --- |
+| Frontend | React.js |
+| Build Tool | Vite |
+| Styling | Tailwind CSS and CSS |
 | Icons | Lucide React |
-| Markdown | React Markdown, Remark GFM |
-| Backend | Python, FastAPI, Uvicorn |
-| AI Model | Google Gemini |
-| AI Integration | Google Gen AI SDK |
-| Retrieval | Scikit-learn, TF-IDF |
-| Similarity | Cosine Similarity |
+| Animations | Particle-based background |
+| Backend | Python |
+| API Framework | FastAPI |
+| ASGI Server | Uvicorn |
+| NLP | NLTK |
+| Stemming | Porter Stemmer |
+| Vectorization | TF-IDF |
+| Similarity Measurement | Cosine Similarity |
+| Spelling Correction | Python Difflib |
+| Machine Learning Library | Scikit-learn |
+| Generative AI | Google Gemini API |
 | Knowledge Base | JSON |
-| Chat Storage | Browser sessionStorage |
-| Theme Storage | Browser localStorage |
-| Frontend Hosting | Cloudflare Pages |
-| Backend Hosting | Render |
+| Frontend Deployment | Cloudflare Pages |
+| Backend Deployment | Render |
 | Version Control | Git and GitHub |
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
-```text
-                  ┌────────────────────────┐
-                  │     Student / User     │
-                  └────────────┬───────────┘
-                               │
-                               ▼
-                  ┌────────────────────────┐
-                  │     React Frontend     │
-                  │ Portfolio-Inspired UI  │
-                  │ Chat / FAQ / About     │
-                  └────────────┬───────────┘
-                               │
-                        HTTP POST /chat
-                               │
-                               ▼
-                  ┌────────────────────────┐
-                  │    FastAPI Backend     │
-                  │     Python Server      │
-                  └────────────┬───────────┘
-                               │
-                               ▼
-                  ┌────────────────────────┐
-                  │   TF-IDF Retrieval     │
-                  │   Cosine Similarity    │
-                  └────────────┬───────────┘
-                               │
-                               ▼
-                  ┌────────────────────────┐
-                  │     knowledge.json     │
-                  │   College Information  │
-                  └────────────┬───────────┘
-                               │
-                               ▼
-                  ┌────────────────────────┐
-                  │  Retrieved Context +   │
-                  │     User Question      │
-                  └────────────┬───────────┘
-                               │
-                               ▼
-                  ┌────────────────────────┐
-                  │   Google Gemini API    │
-                  │     AI Generation      │
-                  └────────────┬───────────┘
-                               │
-                               ▼
-                  ┌────────────────────────┐
-                  │   Generated Response   │
-                  └────────────┬───────────┘
-                               │
-                               ▼
-                  ┌────────────────────────┐
-                  │  React Chat Interface  │
-                  │   Markdown Rendering   │
-                  └────────────────────────┘
+```mermaid
+flowchart TD
+    A[User] --> B[React Frontend]
+    B --> C[FastAPI REST API]
+    C --> D[Query Normalization]
+    D --> E[Spelling Correction]
+    E --> F[NLP Preprocessing]
+    F --> G[TF-IDF Vectorization]
+    G --> H[Cosine Similarity]
+    I[(JSON Knowledge Base)] --> H
+    H --> J[Intent Ranking]
+    J --> K{Match Quality}
+    K -->|Strong Match| L[Direct Knowledge Response]
+    K -->|Ambiguous Match| M[Google Gemini AI]
+    K -->|Weak Match| N[Unknown Response]
+    I --> M
+    M --> O[Grounded AI Response]
+    M -->|API Failure| P[Local Fallback]
+    L --> Q[JSON API Response]
+    O --> Q
+    P --> Q
+    N --> Q
+    Q --> B
 ```
-
-The architecture represents the retrieval-augmented response generation workflow. The backend may also return knowledge-base responses directly, depending on its matching logic.
 
 ---
 
-## 📁 Project Structure
+## How CampusMind Works
+
+### 1. User Input
+
+The user enters a question through the chat interface.
+
+Example:
+
+```text
+BCA ki fees kitni hai?
+```
+
+The frontend sends the question to the FastAPI backend through a POST request.
+
+### 2. Text Preprocessing
+
+The chatbot normalizes the input by performing:
+
+- Lowercase conversion.
+- Punctuation removal.
+- Common abbreviation normalization.
+- Hinglish phrase normalization.
+- Spelling correction.
+- Stopword removal.
+- Porter stemming.
+
+This reduces variations in user input and improves matching.
+
+### 3. TF-IDF Vectorization
+
+Term Frequency–Inverse Document Frequency converts textual question patterns into numerical vectors.
+
+TF-IDF assigns higher importance to words that are relevant to a particular pattern but less common across the complete collection.
+
+The chatbot uses individual question patterns rather than treating an entire intent as a single training document.
+
+Unigrams and bigrams help capture individual terms and short phrases.
+
+### 4. Cosine Similarity
+
+The chatbot compares the processed user query against stored question patterns using cosine similarity.
+
+```math
+\text{Cosine Similarity}(A,B)
+=
+\frac{A \cdot B}{\|A\|\|B\|}
+```
+
+Higher similarity indicates a closer textual match.
+
+The system ranks candidate intents using the highest similarity of their associated patterns.
+
+### 5. Intent Selection
+
+The chatbot evaluates:
+
+- Highest similarity score.
+- Difference between competing intent scores.
+- Course-specific information.
+- Availability of relevant knowledge base responses.
+
+Strong matches are answered directly from the knowledge base.
+
+Ambiguous matches may be forwarded to Gemini with retrieved context.
+
+Weak matches receive an appropriate fallback response.
+
+### 6. AI-Assisted Response Generation
+
+Google Gemini receives relevant information retrieved from the local knowledge base.
+
+The AI is instructed to:
+
+- Answer using supplied institutional information.
+- Preserve exact fees, dates and eligibility criteria.
+- Avoid inventing unavailable information.
+- Maintain course-specific accuracy.
+- Provide concise, structured English responses.
+
+This implements a lightweight retrieval-augmented generation (RAG) approach using TF-IDF retrieval instead of an external vector database.
+
+### 7. Response Delivery
+
+The backend returns a JSON response containing:
+
+- Response text.
+- Matched intent.
+- Similarity-based confidence score.
+
+The React frontend displays the response in the chat interface.
+
+---
+
+## Knowledge Base
+
+CampusMind uses a structured JSON knowledge base containing institutional information and multiple question patterns.
+
+Each intent contains:
+
+- Tag
+- Patterns
+- Keywords
+- Response
+
+Example:
+
+```json
+{
+  "tag": "seats_fees_bca",
+  "patterns": [
+    "BCA fees",
+    "BCA fee structure",
+    "BCA ki fees kitni hai",
+    "How many BCA seats are available"
+  ],
+  "keywords": [
+    "bca",
+    "fees",
+    "seats"
+  ],
+  "response": "BCA fee and seat information with official source links."
+}
+```
+
+The knowledge base can be extended without modifying the frontend or API architecture.
+
+Institution-specific information can be replaced to adapt CampusMind to another college or university.
+
+### Information Sources
+
+The demonstration knowledge base uses information from:
+
+- Official college website.
+- College admission portal.
+- Programme-specific prospectuses.
+- Published academic information.
+- Official institutional notices.
+
+Reference websites:
+
+- https://gcdharamshala.in/
+- https://admission.gcdharamshala.in/
+- https://gcdharamshala.in/download/
+
+Information may change between academic sessions. Students should verify important admission and fee details using the latest official notices.
+
+---
+
+## Project Structure
 
 ```text
 CampusMind/
@@ -197,65 +300,44 @@ CampusMind/
 │   ├── main.py
 │   ├── chatbot.py
 │   ├── knowledge.json
-│   └── requirements.txt
+│   ├── requirements.txt
+│   └── .env                  # Local configuration
 │
 ├── frontend/
 │   ├── public/
-│   │   ├── favicon.svg
-│   │   └── icons.svg
-│   │
 │   ├── src/
-│   │   ├── assets/
 │   │   ├── App.jsx
-│   │   ├── App.css
 │   │   ├── BackgroundParticles.jsx
-│   │   ├── portfolio.css
 │   │   ├── index.css
+│   │   ├── portfolio.css
 │   │   └── main.jsx
-│   │
-│   ├── index.html
 │   ├── package.json
-│   ├── package-lock.json
-│   └── vite.config.js
+│   ├── vite.config.js
+│   └── index.html
 │
 ├── .gitignore
 └── README.md
 ```
 
-### Important Files
-
-| File | Description |
-|------|-------------|
-| main.py | FastAPI application and API endpoints |
-| chatbot.py | Chatbot processing and retrieval logic |
-| knowledge.json | Structured college information |
-| requirements.txt | Python dependencies |
-| App.jsx | Main React application and chat functionality |
-| BackgroundParticles.jsx | Animated canvas-based particle network |
-| portfolio.css | Main UI styling and responsive layouts |
-| index.css | Global styles, typography, and CSS reset |
-| main.jsx | React application entry point |
-| vite.config.js | Vite development and build configuration |
-
 ---
 
-## 🚀 Getting Started
+## Installation and Setup
 
 ### Prerequisites
 
-Make sure you have installed:
+Ensure the following tools are installed:
 
-- Python 3.10 or later
-- Node.js and npm
-- Git
-- Google Gemini API key
-
-Use a Node.js version supported by the project's installed Vite version.
+- Python 3.10 or later.
+- Node.js 20 or later.
+- npm.
+- Git.
+- Google Gemini API key (optional).
 
 ### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/DARK7177/CampusMind.git
+
 cd CampusMind
 ```
 
@@ -275,40 +357,63 @@ python3 -m venv .venv
 
 Activate the virtual environment.
 
-**macOS / Linux:**
+#### macOS / Linux
 
 ```bash
 source .venv/bin/activate
 ```
 
-**Windows PowerShell:**
-
-```powershell
-.venv\Scripts\Activate.ps1
-```
-
-Install the required dependencies:
+#### Windows
 
 ```bash
-pip install -r requirements.txt
+.venv\Scripts\activate
 ```
 
-Create a `.env` file inside the `backend` directory:
+Install dependencies:
+
+```bash
+python -m pip install --upgrade pip
+
+python -m pip install -r requirements.txt
+```
+
+### Backend Dependencies
+
+```text
+fastapi
+uvicorn
+scikit-learn
+nltk
+python-dotenv
+google-genai
+```
+
+### 3. Configure Environment Variables
+
+Create a `.env` file inside the backend directory.
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key
 GEMINI_MODEL=your_supported_gemini_model
 ```
 
-Replace the placeholder values with your actual Gemini API key and supported model name.
+A Gemini API key can be obtained from Google AI Studio:
 
-Start the backend server:
+https://aistudio.google.com/apikey
+
+Use a Gemini model available to your API account.
+
+Gemini integration is optional. The chatbot supports local knowledge base retrieval without an API key.
+
+Never commit the `.env` file or expose API credentials publicly.
+
+### 4. Start the Backend
 
 ```bash
-uvicorn main:app --reload
+python -m uvicorn main:app --reload
 ```
 
-The backend will be available at:
+Backend server:
 
 ```text
 http://127.0.0.1:8000
@@ -320,29 +425,21 @@ Interactive API documentation:
 http://127.0.0.1:8000/docs
 ```
 
-### 3. Frontend Setup
+### 5. Frontend Setup
 
-Open another terminal from the project root and navigate to the frontend directory:
+Open a separate terminal and navigate to the frontend directory.
 
 ```bash
 cd frontend
-```
 
-Install dependencies:
-
-```bash
 npm install
 ```
 
-Create a `.env` file inside the frontend directory if you need to configure a custom backend URL:
+Create a frontend `.env` file:
 
 ```env
 VITE_API_URL=http://127.0.0.1:8000
 ```
-
-The frontend automatically appends `/chat` to the configured backend URL.
-
-If the environment variable is not provided, the application defaults to the local backend URL.
 
 Start the development server:
 
@@ -350,508 +447,278 @@ Start the development server:
 npm run dev
 ```
 
-Open the URL displayed by Vite, usually:
+Open:
 
 ```text
 http://localhost:5173
 ```
 
-### 4. Production Build
-
-Generate an optimized production build:
-
-```bash
-npm run build
-```
-
-The production files will be generated inside:
-
-```text
-frontend/dist/
-```
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
-
 ---
 
-## 🔍 How RAG Works
+## API Documentation
 
-RAG stands for **Retrieval-Augmented Generation**.
+### Available Endpoints
 
-It combines information retrieval with generative artificial intelligence to produce context-aware responses.
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| GET | `/` | Application and engine information |
+| GET | `/health` | Backend health check |
+| POST | `/chat` | Process a user query |
 
-### Step 1: User Question
+### Chat Endpoint
 
-A student enters a question through the React chatbot interface.
-
-Example:
-
-```text
-How can I apply for BCA admission?
+```http
+POST /chat
+Content-Type: application/json
 ```
 
-### Step 2: Backend Processing
-
-The React frontend sends the question to the FastAPI backend using an HTTP POST request.
-
-Example request:
+Request:
 
 ```json
 {
-  "message": "How can I apply for BCA admission?"
+  "message": "What is the BCA fee structure?"
 }
 ```
 
-### Step 3: TF-IDF Vectorization
-
-The backend converts the question and knowledge base entries into numerical vectors using TF-IDF.
-
-TF-IDF stands for Term Frequency–Inverse Document Frequency.
-
-It assigns importance weights to words based on their frequency within documents and across the knowledge base.
-
-### Step 4: Similarity Calculation
-
-Cosine similarity compares the question vector with the knowledge base vectors.
-
-The system identifies the most relevant college information based on similarity scores.
-
-### Step 5: Context Retrieval
-
-Relevant information is retrieved from `knowledge.json`.
-
-This information can be used as context for the language model.
-
-### Step 6: Gemini AI Generation
-
-When AI generation is required, the backend sends the user's question and relevant context to the Google Gemini API.
-
-Gemini generates a conversational response based on the provided information.
-
-### Step 7: Response Display
-
-The backend returns the response to the frontend.
-
-React displays the response using Markdown formatting, including headings, lists, bold text, tables, and clickable links.
-
----
-
-## 📚 Knowledge Base
-
-CampusMind uses a structured JSON knowledge base to store college-related information.
-
-The knowledge base covers topics such as:
-
-- College admissions
-- Eligibility criteria
-- Undergraduate and postgraduate courses
-- Fee structure
-- Scholarships
-- Examination procedures
-- Results
-- Library facilities
-- Hostel facilities
-- Campus services
-- Official website information
-
-Government College Dharamshala is currently used as a demonstration institution.
-
-The knowledge base can be modified to support other colleges and universities without redesigning the entire application.
-
----
-
-## 💬 Chat Session Management
-
-CampusMind supports multiple temporary conversations within the current browser session.
-
-### New Chat
-
-Creates a new conversation while preserving previous conversations in the current browser session.
-
-### Switch Chat
-
-Allows users to reopen previous conversations from the sidebar.
-
-### Clear Chat
-
-Removes messages from the currently selected conversation and restores the welcome screen.
-
-### Delete Chat
-
-Deletes a selected conversation from the current session.
-
-### Temporary Storage
-
-Conversations are stored using the browser's `sessionStorage` API.
-
-Chat history is not stored in a server-side database.
-
-### Session Expiration
-
-The application uses a 10-minute inactivity timeout to reset stored conversations.
-
-Session expiration is checked periodically and when the browser window regains focus.
-
-### Request Cancellation
-
-The application uses AbortController to cancel pending API requests during relevant conversation changes.
-
-This helps prevent outdated responses from being added to the wrong conversation.
-
-### Automatic Scrolling
-
-The chat interface automatically scrolls to the latest message when a new response is received.
-
----
-
-## 🎨 User Interface
-
-CampusMind features a modern interface inspired by a minimal developer portfolio design.
-
-The interface uses a combination of neutral colours, green accents, clean typography, and subtle animations.
-
-### Dark Mode
-
-The dark theme is enabled by default and includes:
-
-- Pure black background
-- Dark sidebar and navigation bar
-- Green accent colour
-- White primary action buttons
-- Subtle borders
-- Animated white particles
-- High-contrast typography
-
-### Light Mode
-
-The light theme includes:
-
-- White background
-- Light grey panels
-- Dark typography
-- Green accent colour
-- Subtle dark particles
-
-### Theme Persistence
-
-The selected theme is saved using the browser's `localStorage` API.
-
-The theme preference is restored when the user reloads or reopens the application.
-
-Theme preferences are stored separately from temporary chat conversations.
-
-### Animated Particle Background
-
-The particle background is implemented using the HTML5 Canvas API.
-
-It uses:
-
-- React useEffect and useRef hooks
-- requestAnimationFrame
-- ResizeObserver
-- Device pixel ratio scaling
-- Dynamic particle positioning
-- Distance-based connecting lines
-- Theme-aware particle colours
-- Reduced-motion preference detection
-
-The particle animation does not require an additional animation library.
-
-### Welcome Screen
-
-The redesigned welcome screen provides:
-
-- CampusMind branding
-- Project introduction
-- Quick admission enquiry button
-- FAQ navigation
-- Demonstration institution information
-
-### Chat Interface
-
-The chat interface includes:
-
-- Separate user and chatbot message styles
-- Markdown response rendering
-- Animated typing indicator
-- Responsive message bubbles
-- Accessible message input
-- Automatic scrolling
-- Conversation history
-
-### Navigation
-
-The application includes three main sections:
-
-| Section | Purpose |
-|---------|---------|
-| Home | Main chatbot interface |
-| FAQs | Frequently asked college-related questions |
-| About | Project information, technologies, and useful links |
-
-### Responsive Design
-
-The interface adapts to desktop, tablet, and mobile devices.
-
-On smaller screens, the sidebar becomes collapsible and can be opened using the mobile navigation button.
-
----
-
-## 🌐 API Endpoint
-
-### POST `/chat`
-
-Sends a question to the chatbot backend.
-
-**Request:**
+Example response:
 
 ```json
 {
-  "message": "What courses are offered?"
+  "response": "BCA fee information...",
+  "intent": "seats_fees_bca",
+  "confidence": 1.0
 }
 ```
 
-**Example response:**
+The confidence field represents a similarity-based matching score, not a calibrated probability or a guarantee of factual accuracy.
 
-```json
-{
-  "response": "The college offers various undergraduate and postgraduate courses.",
-  "intent": "courses",
-  "confidence": 0.85
-}
-```
-
-The response content, intent, and confidence values depend on the backend implementation.
-
-The frontend uses the `response` field to display the chatbot's answer.
-
-### Example API Request Using cURL
+### Test Using cURL
 
 ```bash
 curl -X POST http://127.0.0.1:8000/chat \
   -H "Content-Type: application/json" \
-  -d '{"message":"What courses are offered?"}'
+  -d '{"message":"BCA eligibility"}'
 ```
 
 ---
 
-## 🌍 Deployment
-
-CampusMind uses separate hosting services for its frontend and backend.
-
-| Component | Hosting Platform |
-|-----------|------------------|
-| React Frontend | Cloudflare Pages |
-| Python Backend | Render |
-| Source Code | GitHub |
-
-### Frontend Deployment — Cloudflare Pages
-
-Recommended build configuration:
+## Example Queries
 
 ```text
-Framework Preset: Vite
-Root Directory: frontend
-Build Command: npm run build
-Build Output Directory: dist
-Production Branch: main
+What courses are offered by the college?
+
+What is the eligibility for BCA?
+
+BCA ki fees kitni hai?
+
+How many seats are available in BBA?
+
+Compare BCA and BBA fees.
+
+What is the total cost of BCA for three years?
+
+What is the PGDCA admission process?
+
+Is hostel accommodation available?
+
+What are the library timings?
+
+Can I borrow books at 6 PM?
+
+What is the minimum attendance requirement?
+
+How can I contact the college?
 ```
 
-Configure the following frontend environment variable:
+CampusMind accepts English and Roman Hindi questions while providing English responses.
+
+---
+
+## Testing
+
+The NLP engine can be tested independently of the frontend.
+
+```python
+from chatbot import chatbot
+
+questions = [
+    "Hello",
+    "BCA eligibility",
+    "BCA ki fees kitni hai",
+    "BCA admision proces",
+    "PGDCA eligibility",
+    "Library timings",
+    "Is hostel available?",
+    "College contact number"
+]
+
+for question in questions:
+    result = chatbot.get_response(question)
+
+    print("Question:", question)
+    print("Intent:", result["intent"])
+    print("Score:", result["confidence"])
+    print("Answer:", result["response"])
+    print("-" * 50)
+```
+
+Run the test from the backend directory.
+
+### Evaluation Criteria
+
+- Correct intent identification.
+- Relevance of retrieved responses.
+- English and Hinglish query handling.
+- Spelling correction.
+- Course-specific matching.
+- Response formatting.
+- Unknown query handling.
+- Gemini fallback behaviour.
+
+Similarity scores should not be interpreted as overall chatbot accuracy. A separate labelled test dataset is required for formal accuracy evaluation.
+
+---
+
+## Deployment
+
+### Frontend — Cloudflare Pages
+
+Recommended configuration:
+
+| Setting | Value |
+| --- | --- |
+| Framework | React / Vite |
+| Root Directory | frontend |
+| Build Command | npm run build |
+| Build Output Directory | dist |
+
+Environment variable:
 
 ```env
 VITE_API_URL=https://campusmind-api-q782.onrender.com
 ```
 
-The frontend is accessible through:
+Production website:
 
-```text
 https://campusmind.bhupesh.website
-```
 
-When GitHub integration is enabled, Cloudflare Pages automatically builds and deploys new commits pushed to the configured production branch.
-
-### Backend Deployment — Render
+### Backend — Render
 
 Recommended configuration:
 
-```text
-Runtime: Python
-Root Directory: backend
-Build Command: pip install -r requirements.txt
-Start Command: uvicorn main:app --host 0.0.0.0 --port $PORT
+| Setting | Value |
+| --- | --- |
+| Runtime | Python |
+| Root Directory | backend |
+| Build Command | pip install -r requirements.txt |
+| Health Check Path | /health |
+
+Start command:
+
+```bash
+uvicorn main:app --host 0.0.0.0 --port $PORT
 ```
 
-Configure the following environment variables securely in Render:
+Environment variables:
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key
 GEMINI_MODEL=your_supported_gemini_model
 ```
 
-Backend URL:
+Backend API:
 
-```text
 https://campusmind-api-q782.onrender.com
-```
-
-### Cross-Origin Resource Sharing
-
-The FastAPI backend must allow requests from the configured frontend origins.
-
-The production frontend origin is:
-
-```text
-https://campusmind.bhupesh.website
-```
-
-Local development may also require:
-
-```text
-http://localhost:5173
-http://127.0.0.1:5173
-```
-
-### Deployment Notes
-
-- Frontend-only changes do not require a manual backend redeployment.
-- Changes to frontend environment variables require a new frontend build.
-- Backend changes require a backend deployment.
-- Free-tier hosting may have resource limits and idle shutdowns.
-- Gemini API usage is subject to applicable quotas and limits.
 
 ---
 
-## 🔐 Security and Privacy Considerations
+## Security and Privacy
 
-- Gemini API credentials are stored in backend environment variables.
-- Sensitive `.env` files should be excluded from version control.
-- Gemini API calls are made from the backend.
-- The frontend does not expose the Gemini API key.
-- CORS controls browser access from configured frontend origins.
-- Chat history is temporarily stored in the browser.
-- Theme preferences are stored locally on the user's device.
-- The application does not require student authentication.
-- Questions may be processed by the backend and Gemini API when AI generation is required.
-- Users should avoid entering sensitive personal information.
-- AI-generated answers should be verified using official college sources.
+- Gemini API credentials are stored on the backend.
+- Environment variables are excluded from version control.
+- Cross-Origin Resource Sharing (CORS) is configured for supported frontend origins.
+- User message length is validated using Pydantic.
+- Conversation history is managed through browser sessions.
+- No permanent user account database is required.
+- The chatbot does not access private student records.
+- Relevant queries and retrieved context may be sent to Google Gemini when AI-assisted generation is enabled.
 
----
-
-## ⚠️ Limitations
-
-- College information requires manual updates.
-- TF-IDF retrieval primarily matches lexical similarity.
-- Gemini API requires an internet connection.
-- AI-generated responses may contain inaccuracies.
-- Chat history is temporary and browser-based.
-- The current backend does not automatically maintain multi-turn conversational memory.
-- The application does not automatically synchronize with live college notices.
-- Free-tier hosting may introduce delays during initial requests.
-- The quality of retrieved information depends on the knowledge base.
-- The current demonstration knowledge base is primarily focused on Government College Dharamshala.
+Users should not enter passwords, personal identification numbers or confidential information.
 
 ---
 
-## 🔮 Future Enhancements
+## Limitations
 
-- Semantic embeddings for improved retrieval
-- Vector database integration
-- Automatic PDF and document ingestion
-- Multilingual chatbot support
-- Student authentication
-- Persistent conversation history
-- Multi-turn conversational memory
-- Admin dashboard
-- Automatic college information updates
-- Advanced analytics and feedback collection
-- Support for multiple institutions
-- Institution-specific knowledge base selection
-- Source citations for retrieved information
-- Improved accessibility and performance optimization
+- Responses depend on the quality and coverage of the knowledge base.
+- Institutional information requires periodic updates.
+- TF-IDF primarily measures lexical similarity rather than deep semantic meaning.
+- Complex multi-intent questions may require additional retrieval logic.
+- Fee comparisons and calculations are supported for selected predefined queries.
+- Gemini availability depends on API connectivity and usage limits.
+- AI-generated responses may still contain errors.
+- The chatbot does not provide real-time admission status, seat vacancies or personal examination results.
+- Conversation history in the frontend does not imply persistent conversational memory in the NLP engine.
 
 ---
 
-## 📚 Key Concepts
+## Future Enhancements
 
-### Retrieval-Augmented Generation
-
-A technique that combines external information retrieval with language model generation to produce context-aware responses.
-
-### TF-IDF
-
-A statistical technique used to represent the importance of words in text documents.
-
-### Cosine Similarity
-
-A mathematical measure used to determine similarity between numerical vectors.
-
-### FastAPI
-
-A modern Python framework for building web APIs.
-
-### React
-
-A JavaScript library for building interactive component-based user interfaces.
-
-### Gemini
-
-Google's family of generative AI models used to generate natural-language responses.
-
-### HTML5 Canvas
-
-A browser-based drawing interface used to render graphics and animations programmatically.
-
-CampusMind uses Canvas to create its animated particle network background.
-
-### sessionStorage
-
-A browser storage mechanism used to temporarily store data within the current browsing session.
-
-CampusMind uses sessionStorage for conversation history.
-
-### localStorage
-
-A browser storage mechanism used to retain data across browser sessions.
-
-CampusMind uses localStorage to remember the user's selected theme.
+- Semantic search using sentence embeddings.
+- Vector database integration.
+- Automated official website and prospectus ingestion.
+- Advanced multi-intent query processing.
+- Dynamic fee calculations.
+- Multi-college knowledge base support.
+- Context-aware conversations.
+- Multilingual response generation.
+- Administrative dashboard for knowledge base management.
+- Voice-based interaction.
+- Automated evaluation and performance monitoring.
 
 ---
 
-## 📄 Disclaimer
+## Academic Project
 
-CampusMind is an independent academic project developed for educational and demonstration purposes.
+| Field | Details |
+| --- | --- |
+| Project Title | CampusMind — AI-Powered College Enquiry Chatbot |
+| Developer | Bhupesh Kumar |
+| Roll Number | 3 |
+| Programme | M.Sc. (Hons.) Computer Science |
+| Specialization | Data Science |
+| University | Panjab University |
+| Subject | MDS-2605 — Minor Project |
+| Related Subject | MDS-2602 — Programming in Python |
+| Academic Session | 2026–27 |
 
-It is designed as a generic college enquiry system, with Government College Dharamshala serving as a reference institution.
-
-CampusMind is not an official service of Government College Dharamshala or any other educational institution.
-
-Users should verify important information about admissions, fees, scholarships, examinations, and other academic matters through official college announcements.
-
----
-
-## 👨‍💻 Developer
-
-**GitHub:** [DARK7177](https://github.com/DARK7177)
-
-**Portfolio:** [Developer Portfolio](https://bhupesh-portfolio7.netlify.app/)
-
-**Repository:** [CampusMind](https://github.com/DARK7177/CampusMind)
-
-**Live Project:** [campusmind.bhupesh.website](https://campusmind.bhupesh.website)
+This project demonstrates the practical application of Python programming, Natural Language Processing, information retrieval, machine learning techniques, REST API development and generative AI integration.
 
 ---
 
-<div align="center">
+## Developer
 
-**Built with React, Python, FastAPI, Retrieval-Augmented Generation, and Google Gemini AI.**
+**Bhupesh Kumar**
 
-*Making college information more accessible through conversational AI.*
+- GitHub: https://github.com/DARK7177
+- Portfolio: https://bhupesh-portfolio7.netlify.app/
+- Project: https://campusmind.bhupesh.website
 
-⭐ If you find this project useful, consider starring the repository.
+---
 
-</div>
+## Acknowledgements
+
+- Panjab University.
+- Government College Dharamshala.
+- Python and FastAPI communities.
+- Scikit-learn and NLTK.
+- Google Gemini AI.
+- React and Tailwind CSS.
+- Cloudflare Pages and Render.
+
+---
+
+<p align="center">
+  Developed by Bhupesh Kumar
+  <br/>
+  CampusMind — Making Campus Information More Accessible
+</p>
